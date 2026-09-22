@@ -2,33 +2,33 @@
 
 We consider the three-dimensional incompressible Navier–Stokes equations
 
-$$
+```math
 \partial_t u + (u\cdot\nabla)u
 =
--\nabla p + \nu \Delta u + f,
-$$
+-\nabla p + \nu \Delta u + f
+```
 
 with
 
-$$
+```math
 \nabla\cdot u = 0,
 \qquad
 u(\cdot,0)=u_0.
-$$
+```
 
 For the Clay-A regime,
 
-$$
+```math
 f=0,
-$$
+```
 
-and the initial datum \(u_0\) is smooth, divergence-free, and rapidly decaying on \(\mathbb R^3\).
+with \(u_0\) smooth, divergence-free, and rapidly decaying on \(\mathbb R^3\).
 
 ---
 
 ## Main theorem chain
 
-$$
+```math
 u_0
 \longrightarrow
 u_{\mathrm{LH}}
@@ -44,7 +44,7 @@ M7(u)
 \mathrm{Serrin}(u)
 \longrightarrow
 \mathrm{Continuation}(u).
-$$
+```
 
 The same Leray–Hopf trajectory \(u\) is retained throughout the chain.
 
@@ -54,93 +54,93 @@ The same Leray–Hopf trajectory \(u\) is retained throughout the chain.
 
 For admissible initial data \(u_0\), Leray–Hopf existence gives a global weak solution
 
-$$
+```math
 u=u_{\mathrm{LH}}(x,t),
 \qquad
 u(\cdot,0)=u_0.
-$$
+```
 
-Thus
+Hence
 
-$$
+```math
 u_0
 \longrightarrow
 u_{\mathrm{LH}}.
-$$
+```
 
-The framework is formulated for the Leray–Hopf solution class itself, rather than only for one special family of initial data.
+The framework is formulated on the full Leray–Hopf solution class.
 
 ---
 
 ## 2. Leray–Hopf encoding
 
-A Leray–Hopf trajectory is mapped into the structural encoding:
+Every represented Leray–Hopf trajectory admits the structural encoding
 
-$$
+```math
 \mathrm{LH}(u)
 \longrightarrow
 \mathrm{Enc}(u).
-$$
+```
 
-This encoding refers to the same physical spacetime trajectory \(u\).
+The encoding retains the original spacetime solution \(u\).
 
 ---
 
 ## 3. GP / BKQR representation
 
-The encoded trajectory admits the GP and BKQR representations
+The encoded trajectory admits equivalent GP and BKQR representations:
 
-$$
+```math
 \mathrm{Enc}(u)
 \iff
 \mathrm{GP}(u)
 \iff
 \mathrm{BKQR}(u).
-$$
+```
 
-These representations expose the interaction structure used by the M7 argument.
+These representations expose the interaction structure used by the M7 mechanism.
 
 ---
 
 ## 4. M7 critical-energy mechanism
 
-The GP/BKQR representation feeds the M7 detector and energy-injection mechanism:
+The GP/BKQR representation feeds the M7 detector and critical-energy mechanism:
 
-$$
+```math
 \mathrm{GP}(u)
-\;\longleftrightarrow\;
+\longleftrightarrow
 \mathrm{BKQR}(u)
 \longrightarrow
 M7(u).
-$$
+```
 
-At this stage the formal development isolates the physical-realization and payment interfaces required by the M7 argument.
+The formal development isolates the physical-realization and payment interfaces required at this step.
 
 ---
 
-## 5. M7 implies Serrin control
+## 5. M7 to Serrin
 
-The M7 estimate produces a Serrin-class spacetime bound
+The M7 estimate yields Serrin-class spacetime control:
 
-$$
+```math
 u\in L^q_t L^p_x,
-$$
+```
 
 for an admissible Serrin pair satisfying
 
-$$
+```math
 \frac{2}{q}+\frac{3}{p}\leq 1,
 \qquad
 p>3.
-$$
+```
 
 Therefore
 
-$$
+```math
 M7(u)
 \longrightarrow
 \mathrm{Serrin}(u).
-$$
+```
 
 ---
 
@@ -148,23 +148,23 @@ $$
 
 Serrin regularity excludes a finite-time loss of regularity for the same solution:
 
-$$
+```math
 \mathrm{Serrin}(u)
 \longrightarrow
 \mathrm{Continuation}(u).
-$$
+```
 
-Hence the Leray–Hopf trajectory enters the regular/strong regime.
+Thus the Leray–Hopf trajectory enters the regular/strong regime.
 
-Once regularity is obtained, weak–strong uniqueness identifies the resulting regular trajectory uniquely with its initial datum.
+Weak–strong uniqueness then identifies the regular trajectory uniquely with its initial datum.
 
 ---
 
-# Combined conditional theorem
+# Combined theorem
 
-The currently verified logical form is
+The current conditional logical form is
 
-$$
+```math
 \mathrm{LH}(u)
 \land
 H_{\mathrm{phys}}(u)
@@ -174,11 +174,11 @@ H_{\mathrm{payment}}(u)
 H_{\mathrm{same}}(u)
 \Longrightarrow
 \mathrm{Continuation}(u).
-$$
+```
 
-Its internal theorem chain is
+Its theorem spine is
 
-$$
+```math
 \mathrm{LH}(u)
 \longrightarrow
 \mathrm{Enc}(u)
@@ -192,7 +192,7 @@ M7(u)
 \mathrm{Serrin}(u)
 \longrightarrow
 \mathrm{Continuation}(u).
-$$
+```
 
 ---
 
@@ -200,43 +200,42 @@ $$
 
 Let
 
-$$
+```math
 \mathcal D_{\mathrm{Clay}}
 =
 \left\{
 u_0\in C^\infty_\sigma(\mathbb R^3)
 :
-u_0
-\text{ is rapidly decaying}
+u_0 \text{ is rapidly decaying}
 \right\}.
-$$
+```
 
 For every
 
-$$
+```math
 u_0\in\mathcal D_{\mathrm{Clay}},
-$$
+```
 
 Leray–Hopf existence gives at least one trajectory
 
-$$
+```math
 u\in\mathcal{LH}(u_0).
-$$
+```
 
 The Clay-A Leray–Hopf trajectories form a subclass of the full Leray–Hopf regime:
 
-$$
+```math
 \bigcup_{u_0\in\mathcal D_{\mathrm{Clay}}}
 \mathcal{LH}(u_0)
 \subseteq
 \mathcal{LH}(\mathbb R^3).
-$$
+```
 
-Therefore a theorem applying to all Leray–Hopf solutions automatically applies to the Clay-A subclass.
+Therefore any theorem established for all Leray–Hopf solutions automatically applies to the Clay-A subclass.
 
-The desired specialization is
+The resulting chain is
 
-$$
+```math
 u_0
 \longrightarrow
 u_{\mathrm{LH}}
@@ -250,7 +249,7 @@ M7
 \mathrm{smooth\ continuation}
 \longrightarrow
 \mathrm{uniqueness}.
-$$
+```
 
 ---
 
@@ -258,7 +257,7 @@ $$
 
 The native Lean development verifies the same-solution conditional chain
 
-$$
+```math
 \mathrm{LH}
 \longrightarrow
 \mathrm{Enc}
@@ -272,21 +271,21 @@ M7
 \mathrm{Serrin}
 \longrightarrow
 \mathrm{Continuation}.
-$$
+```
 
-The remaining interfaces should remain explicit until they are discharged universally:
+The remaining explicit interfaces are
 
-$$
+```math
 H_{\mathrm{phys}},
 \qquad
 H_{\mathrm{payment}},
 \qquad
 H_{\mathrm{same}}.
-$$
+```
 
 The unconditional target is
 
-$$
+```math
 \forall u\in\mathcal{LH}(\mathbb R^3),
 \qquad
 \mathrm{LH}(u)
@@ -296,6 +295,6 @@ M7(u)
 \mathrm{Serrin}(u)
 \Longrightarrow
 \mathrm{Continuation}(u).
-$$
+```
 
-For Clay-A initial data, this theorem would apply by restriction to the corresponding Leray–Hopf subclass.
+For Clay-A initial data, this applies by restriction to the corresponding Leray–Hopf subclass.
