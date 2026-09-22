@@ -1,63 +1,63 @@
 # NSE Leray–Hopf → GP/BKQR → M7 → Serrin
 
-We work with the three-dimensional incompressible Navier–Stokes equations
+We consider the three-dimensional incompressible Navier–Stokes equations
 
 $$
-\partial_t u +(u\cdot\nabla)u
+\partial_t u + (u\cdot\nabla)u
 =
--\nabla p+\nu\Delta u+f,
-\qquad
-\nabla\cdot u=0,
-\qquad
-u(\cdot,0)=u_0 .
+-\nabla p + \nu \Delta u + f,
 $$
 
-For the Clay-A regime we specialize to
+with
+
+$$
+\nabla\cdot u = 0,
+\qquad
+u(\cdot,0)=u_0.
+$$
+
+For the Clay-A regime,
 
 $$
 f=0,
-\qquad
-u_0\in C^\infty_\sigma(\mathbb R^3)
 $$
 
-with the required decay at spatial infinity.
+and the initial datum \(u_0\) is smooth, divergence-free, and rapidly decaying on \(\mathbb R^3\).
 
 ---
 
-## Main chain
+## Main theorem chain
 
 $$
-\boxed{
 u_0
 \longrightarrow
 u_{\mathrm{LH}}
 \longrightarrow
 \mathrm{Enc}(u)
 \longleftrightarrow
-\mathrm{GP}
+\mathrm{GP}(u)
 \longleftrightarrow
-\mathrm{BKQR}
+\mathrm{BKQR}(u)
 \longrightarrow
-M7
+M7(u)
 \longrightarrow
-\mathrm{Serrin}
+\mathrm{Serrin}(u)
 \longrightarrow
-\mathrm{Continuation}(u)
-}
+\mathrm{Continuation}(u).
 $$
 
-The same Leray–Hopf trajectory \(u\) is preserved throughout the chain.
+The same Leray–Hopf trajectory \(u\) is retained throughout the chain.
 
 ---
 
-## Theorem 1 — Leray–Hopf entrance
+## 1. Leray–Hopf entrance
 
-For admissible initial data \(u_0\), there exists a global Leray–Hopf weak solution
+For admissible initial data \(u_0\), Leray–Hopf existence gives a global weak solution
 
 $$
 u=u_{\mathrm{LH}}(x,t),
 \qquad
-u(\cdot,0)=u_0 .
+u(\cdot,0)=u_0.
 $$
 
 Thus
@@ -65,16 +65,16 @@ Thus
 $$
 u_0
 \longrightarrow
-u_{\mathrm{LH}} .
+u_{\mathrm{LH}}.
 $$
 
-The framework is formulated on the full Leray–Hopf solution class, so the solutions arising from Clay-admissible initial data form a subclass of the represented regime.
+The framework is formulated for the Leray–Hopf solution class itself, rather than only for one special family of initial data.
 
 ---
 
-## Theorem 2 — Leray–Hopf encoding
+## 2. Leray–Hopf encoding
 
-Every represented Leray–Hopf trajectory admits the structural encoding
+A Leray–Hopf trajectory is mapped into the structural encoding:
 
 $$
 \mathrm{LH}(u)
@@ -82,73 +82,71 @@ $$
 \mathrm{Enc}(u).
 $$
 
-The encoding retains the original spacetime solution \(u\); it does not replace it by a different solution.
+This encoding refers to the same physical spacetime trajectory \(u\).
 
 ---
 
-## Theorem 3 — GP / BKQR equivalence
+## 3. GP / BKQR representation
 
-The encoded solution admits equivalent GP and BKQR representations:
+The encoded trajectory admits the GP and BKQR representations
 
 $$
-\boxed{
 \mathrm{Enc}(u)
 \iff
 \mathrm{GP}(u)
 \iff
-\mathrm{BKQR}(u)
-}
+\mathrm{BKQR}(u).
 $$
 
-These representations expose the interaction structure used by the later M7 argument.
+These representations expose the interaction structure used by the M7 argument.
 
 ---
 
-## Theorem 4 — M7 critical-energy mechanism
+## 4. M7 critical-energy mechanism
 
-From the GP/BKQR representation, together with the required physical-realization and payment hypotheses, the M7 detector/injection mechanism applies:
+The GP/BKQR representation feeds the M7 detector and energy-injection mechanism:
 
 $$
-\mathrm{GP/BKQR}(u)
+\mathrm{GP}(u)
+\;\longleftrightarrow\;
+\mathrm{BKQR}(u)
 \longrightarrow
 M7(u).
 $$
 
-Schematically, M7 supplies the critical control needed to prevent an uncontrolled concentration cascade.
+At this stage the formal development isolates the physical-realization and payment interfaces required by the M7 argument.
 
 ---
 
-## Theorem 5 — M7 to Serrin
+## 5. M7 implies Serrin control
 
-The M7 estimate yields a Serrin-class spacetime bound:
+The M7 estimate produces a Serrin-class spacetime bound
 
 $$
-M7(u)
-\longrightarrow
-u\in L^q_tL^p_x,
+u\in L^q_t L^p_x,
 $$
 
 for an admissible Serrin pair satisfying
 
 $$
-\frac{2}{q}+\frac{3}{p}\le 1,
+\frac{2}{q}+\frac{3}{p}\leq 1,
 \qquad
 p>3.
 $$
 
-Hence
+Therefore
 
 $$
-\boxed{
-M7(u)\longrightarrow \mathrm{Serrin}(u).
-}
+M7(u)
+\longrightarrow
+\mathrm{Serrin}(u).
 $$
 
 ---
 
-## Theorem 6 — Serrin continuation
+## 6. Serrin continuation
 
-Serrin regularity prevents a finite-time singular endpoint of the same solution:
+Serrin regularity excludes a finite-time loss of regularity for the same solution:
 
 $$
 \mathrm{Serrin}(u)
@@ -156,18 +154,17 @@ $$
 \mathrm{Continuation}(u).
 $$
 
-Consequently the Leray–Hopf trajectory upgrades to the regular/strong regime on the interval under consideration.
+Hence the Leray–Hopf trajectory enters the regular/strong regime.
 
-By weak–strong uniqueness, once this upgrade is available the regular trajectory associated with the initial datum is unique.
+Once regularity is obtained, weak–strong uniqueness identifies the resulting regular trajectory uniquely with its initial datum.
 
 ---
 
-# Combined theorem
+# Combined conditional theorem
 
-The formal chain has the schematic form
+The currently verified logical form is
 
 $$
-\boxed{
 \mathrm{LH}(u)
 \land
 H_{\mathrm{phys}}(u)
@@ -177,32 +174,29 @@ H_{\mathrm{payment}}(u)
 H_{\mathrm{same}}(u)
 \Longrightarrow
 \mathrm{Continuation}(u).
-}
 $$
 
-Expanded,
+Its internal theorem chain is
 
 $$
-\boxed{
 \mathrm{LH}(u)
-\to
+\longrightarrow
 \mathrm{Enc}(u)
-\leftrightarrow
-\mathrm{GP}
-\leftrightarrow
-\mathrm{BKQR}
-\to
-M7
-\to
-\mathrm{Serrin}
-\to
+\longleftrightarrow
+\mathrm{GP}(u)
+\longleftrightarrow
+\mathrm{BKQR}(u)
+\longrightarrow
+M7(u)
+\longrightarrow
+\mathrm{Serrin}(u)
+\longrightarrow
 \mathrm{Continuation}(u).
-}
 $$
 
 ---
 
-## Clay-A specialization
+# Clay-A specialization
 
 Let
 
@@ -212,73 +206,87 @@ $$
 \left\{
 u_0\in C^\infty_\sigma(\mathbb R^3)
 :
-u_0 \text{ has the required decay}
+u_0
+\text{ is rapidly decaying}
 \right\}.
 $$
 
-Then
+For every
 
 $$
-u_0\in\mathcal D_{\mathrm{Clay}}
-\Longrightarrow
-\exists\,u_{\mathrm{LH}}
-\Longrightarrow
-u_{\mathrm{LH}}\in\mathcal{LH}(\mathbb R^3).
+u_0\in\mathcal D_{\mathrm{Clay}},
 $$
 
-Since
+Leray–Hopf existence gives at least one trajectory
+
+$$
+u\in\mathcal{LH}(u_0).
+$$
+
+The Clay-A Leray–Hopf trajectories form a subclass of the full Leray–Hopf regime:
 
 $$
 \bigcup_{u_0\in\mathcal D_{\mathrm{Clay}}}
 \mathcal{LH}(u_0)
 \subseteq
-\mathcal{LH}(\mathbb R^3),
+\mathcal{LH}(\mathbb R^3).
 $$
 
-the Clay-A solution class is contained in the larger Leray–Hopf regime handled by the framework.
+Therefore a theorem applying to all Leray–Hopf solutions automatically applies to the Clay-A subclass.
 
-Thus the intended closure is
+The desired specialization is
 
 $$
-\boxed{
 u_0
-\to
+\longrightarrow
 u_{\mathrm{LH}}
-\to
+\longrightarrow
 \mathrm{GP/BKQR}
-\to
+\longrightarrow
 M7
-\to
+\longrightarrow
 \mathrm{Serrin}
-\to
+\longrightarrow
 \mathrm{smooth\ continuation}
-\to
+\longrightarrow
 \mathrm{uniqueness}.
-}
 $$
 
 ---
 
-## Current formal boundary
+## Formal status
 
-The Lean development verifies the same-solution conditional chain and the structural Leray–Hopf / GP / BKQR / M7 / Serrin interfaces.
-
-The remaining hypotheses should be kept explicit until discharged universally:
+The native Lean development verifies the same-solution conditional chain
 
 $$
-\boxed{
+\mathrm{LH}
+\longrightarrow
+\mathrm{Enc}
+\longleftrightarrow
+\mathrm{GP}
+\longleftrightarrow
+\mathrm{BKQR}
+\longrightarrow
+M7
+\longrightarrow
+\mathrm{Serrin}
+\longrightarrow
+\mathrm{Continuation}.
+$$
+
+The remaining interfaces should remain explicit until they are discharged universally:
+
+$$
 H_{\mathrm{phys}},
 \qquad
 H_{\mathrm{payment}},
 \qquad
 H_{\mathrm{same}}.
-}
 $$
 
-The final unconditional target is therefore
+The unconditional target is
 
 $$
-\boxed{
 \forall u\in\mathcal{LH}(\mathbb R^3),
 \qquad
 \mathrm{LH}(u)
@@ -288,7 +296,6 @@ M7(u)
 \mathrm{Serrin}(u)
 \Longrightarrow
 \mathrm{Continuation}(u).
-}
 $$
 
-For Clay-A data this specializes directly to the desired global regularity route.
+For Clay-A initial data, this theorem would apply by restriction to the corresponding Leray–Hopf subclass.
