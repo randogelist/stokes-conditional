@@ -88,7 +88,8 @@ theorem LH_EXPONENT_PARTITION_REGULAR_OR_IRREGULAR (s : ℝ)
 theorem REGULAR_AND_IRREGULAR_FORCE_CLASSES_DISJOINT (s : ℝ) :
     ¬ (L2CriticalRegularExponent s ∧ L2IrregularButLHExponent s) := by
   simp only [L2CriticalRegularExponent, L2IrregularButLHExponent]
-  linarith
+  rintro ⟨hregular, _, hrough⟩
+  exact (not_lt_of_ge hregular) hrough
 
 theorem LH_POWER_TAIL_THRESHOLD_HALF (α : ℝ) :
     LHPowerTailExponent α ↔ (1 / 2 : ℝ) < α := by

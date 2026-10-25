@@ -102,6 +102,45 @@ class ProvenanceTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'escapes repository'):
                 verify.repository_path(Path(d), '../outside')
 
+    def repaired_record(self, original=b'import Init\n'):
+        repaired = original.replace(b'import Init', b'import Init\n-- proof repair', 1)
+        return {
+            'original_sha256': hashlib.sha256(original).hexdigest(),
+            'sha256': hashlib.sha256(repaired).hexdigest(),
+            'repair': {'reason': 'Test exact repair replay', 'edits': [{
+                'old': 'import Init', 'new': 'import Init\n-- proof repair', 'occurrences': 1}]}
+        }
+
+    def test_exact_repair_replays_without_changing_original(self):
+        original = b'import Init\n'
+        record = self.repaired_record(original)
+        self.assertEqual(verify.apply_recorded_repair(original, record, 'test'), b'import Init\n-- proof repair\n')
+        self.assertEqual(original, b'import Init\n')
+
+    def test_tampered_repair_text_fails(self):
+        record = self.repaired_record()
+        record['repair']['edits'][0]['new'] += '\n-- tampered'
+        with self.assertRaisesRegex(ValueError, 'result hash mismatch'):
+            verify.apply_recorded_repair(b'import Init\n', record, 'test')
+
+    def test_wrong_original_hash_fails(self):
+        record = self.repaired_record()
+        record['original_sha256'] = '0' * 64
+        with self.assertRaisesRegex(ValueError, 'original hash mismatch'):
+            verify.apply_recorded_repair(b'import Init\n', record, 'test')
+
+    def test_ambiguous_repair_match_fails(self):
+        original = b'import Init\nimport Init\n'
+        record = self.repaired_record(original)
+        with self.assertRaisesRegex(ValueError, 'does not occur exactly once'):
+            verify.apply_recorded_repair(original, record, 'test')
+
+    def test_missing_repair_match_fails(self):
+        record = self.repaired_record()
+        record['repair']['edits'][0]['old'] = 'nonexistent proof'
+        with self.assertRaisesRegex(ValueError, 'does not occur exactly once'):
+            verify.apply_recorded_repair(b'import Init\n', record, 'test')
+
 
 if __name__ == "__main__":
     unittest.main()

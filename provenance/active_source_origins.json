@@ -84,13 +84,24 @@
     ]
   },
   "NSEForcingRegularityClasses.lean": {
-    "sha256": "c8af8efd6b8748f5679c0033123ecdabc351526d411deab4939f00d9831bf0ce",
+    "sha256": "7d5e471d1085b326e140854d6ad78df067e7a7e291346a8c3ffade03b948af35",
     "origins": [
       {
         "archive": "provenance/archives/NSE_FORCING_REGULARITY_CLASSES_LEAN_v0_1_4.zip",
         "member": "NSE_FORCING_REGULARITY_CLASSES_LEAN_v0_1_4/NSEForcingRegularityClasses.lean"
       }
-    ]
+    ],
+    "original_sha256": "c8af8efd6b8748f5679c0033123ecdabc351526d411deab4939f00d9831bf0ce",
+    "repair": {
+      "reason": "First Linux Lean 4.33.0 CI build failed because linarith was invoked before introducing the negated conjunction. Introduce the incompatible exponent bounds and apply not_lt_of_ge; theorem statement unchanged.",
+      "edits": [
+        {
+          "old": "theorem REGULAR_AND_IRREGULAR_FORCE_CLASSES_DISJOINT (s : ℝ) :\n    ¬ (L2CriticalRegularExponent s ∧ L2IrregularButLHExponent s) := by\n  simp only [L2CriticalRegularExponent, L2IrregularButLHExponent]\n  linarith\n",
+          "new": "theorem REGULAR_AND_IRREGULAR_FORCE_CLASSES_DISJOINT (s : ℝ) :\n    ¬ (L2CriticalRegularExponent s ∧ L2IrregularButLHExponent s) := by\n  simp only [L2CriticalRegularExponent, L2IrregularButLHExponent]\n  rintro ⟨hregular, _, hrough⟩\n  exact (not_lt_of_ge hregular) hrough\n",
+          "occurrences": 1
+        }
+      ]
+    }
   },
   "Master_R3_details.lean": {
     "sha256": "0cbd5b82a31fad054b25284a844a41237cb087e0fb18227741886baca12d3666",

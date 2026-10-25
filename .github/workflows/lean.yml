@@ -2,6 +2,7 @@ name: Lean build and axiom audit
 
 on:
   push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -37,8 +38,9 @@ jobs:
       - name: Require generated build files to be committed
         run: git diff --exit-code -- All.lean lakefile.lean lean-toolchain scripts/KernelAudit.lean
 
-      - name: Cache compatible Lean toolchain
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+      - name: Restore compatible Lean toolchain
+        id: elan-cache
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: ~/.elan
           key: elan-${{ runner.os }}-${{ runner.arch }}-4.1.2-${{ hashFiles('lean-toolchain') }}
@@ -78,22 +80,48 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           Add-Content -Path $env:GITHUB_PATH -Value (Join-Path $env:USERPROFILE '.elan\bin')
 
-      - name: Cache compatible Mathlib dependencies
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+      - name: Save installed Lean toolchain
+        if: steps.elan-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: ~/.elan
+          key: ${{ steps.elan-cache.outputs.cache-primary-key }}
+
+      - name: Restore compatible Mathlib dependencies
+        id: mathlib-cache
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: .lake/packages
           key: mathlib-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}
 
-      - name: Cache project compilation traces
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+      - name: Fetch cached Mathlib
+        run: lake exe cache get
+
+      - name: Save verified dependency cache
+        if: steps.mathlib-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: .lake/packages
+          key: ${{ steps.mathlib-cache.outputs.cache-primary-key }}
+
+      - name: Restore project compilation traces
+        id: project-cache
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: .lake/build
           key: project-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-${{ hashFiles('*.lean', 'Fefferman/**/*.lean', 'NSE/**/*.lean', 'scripts/**') }}
           restore-keys: |
             project-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-
 
-      - name: Fetch cached Mathlib, compile, and audit every project declaration
-        run: python scripts/verify.py --fetch-cache
+      - name: Compile and audit every project declaration
+        run: python scripts/verify.py
+
+      - name: Save completed module compilation traces
+        if: always() && steps.project-cache.outputs.cache-primary-key != '' && steps.project-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: .lake/build
+          key: ${{ steps.project-cache.outputs.cache-primary-key }}
 
       - name: Require immutable dependency resolution
         run: git diff --exit-code -- lake-manifest.json lean-toolchain

@@ -72,11 +72,73 @@ run_cmd do
     `Types
   ]
   let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let expectedTheorems : Array (Name × Nat) := #[
+    (`Audit, 0),
+    (`ConcreteABCDUnifiedClosure, 141),
+    (`Fefferman.Analysis, 0),
+    (`Fefferman.CanonicalSource, 13),
+    (`Fefferman.Continuation, 4),
+    (`Fefferman.DerivationSupport, 6),
+    (`Fefferman.FiniteSpectral, 25),
+    (`Fefferman.ForceRegimes, 6),
+    (`Fefferman.IntrinsicIdentification, 12),
+    (`Fefferman.KernelAlgebra, 38),
+    (`Fefferman.KernelBirth, 7),
+    (`Fefferman.KernelCalculus, 8),
+    (`Fefferman.KernelCapacity, 16),
+    (`Fefferman.KernelCovariance, 10),
+    (`Fefferman.KernelCritical, 8),
+    (`Fefferman.KernelGeometry, 12),
+    (`Fefferman.KernelPackets, 4),
+    (`Fefferman.KernelRenewal, 14),
+    (`Fefferman.KernelStorage, 10),
+    (`Fefferman.Logic, 8),
+    (`Fefferman.MasterAC, 5),
+    (`Fefferman.MasterCore, 6),
+    (`Fefferman.MovingFrame, 9),
+    (`Fefferman.Obstructions, 5),
+    (`Fefferman.PhysicsClassical, 1),
+    (`Fefferman.PhysicsGravity, 3),
+    (`Fefferman.PhysicsQuantum, 3),
+    (`Fefferman.PhysicsUnification, 4),
+    (`Fefferman.PhysicsVariationalTransport, 4),
+    (`Fefferman.ProjectRoutes, 8),
+    (`Fefferman.R3SourceBranch, 8),
+    (`Fefferman.ReconstructedRoutes, 7),
+    (`Fefferman.ReducedCapacity, 13),
+    (`Fefferman.ScalarLedger, 17),
+    (`Fefferman.SourceGeometry, 6),
+    (`Fefferman.Statements, 0),
+    (`Fefferman.T3IntegralBranch, 19),
+    (`«Feffermann-Classification», 9),
+    (`LayerA_Mathematics, 1),
+    (`LayerB_Physics, 1),
+    (`Master_R3_derivation, 11),
+    (`Master_R3_details, 0),
+    (`Master_T3, 4),
+    (`Master_T3_derivation, 15),
+    (`Master_T3_details, 0),
+    (`Master_r3, 6),
+    (`NSE.Audit, 0),
+    (`NSE.Completion, 23),
+    (`NSE.Continuation, 4),
+    (`NSE.CriticalBalance, 13),
+    (`NSE.HilbertEntrance, 9),
+    (`NSE.Injection, 8),
+    (`NSE.LHLedger, 5),
+    (`NSE.NSEAnchor, 5),
+    (`NSE.PrefixPayment, 21),
+    (`NSE.Representation, 27),
+    (`NSE.Serrin, 8),
+    (`NSEForcingRegularityClasses, 19),
+    (`Types, 0)
+  ]
   for mod in projectModules do
     unless (env.getModuleIdx? mod).isSome do
       throwError "Missing project module in audit environment: {mod}"
   let mut declarations : Nat := 0
   let mut theorems : Nat := 0
+  let mut perModule : Std.HashMap Name Nat := {}
   for (name, ci) in env.constants do
     if let some idx := env.getModuleIdxFor? name then
       if projectModules.contains env.header.moduleNames[idx]! then
@@ -91,7 +153,15 @@ run_cmd do
             throwError "Unexpected axiom in {name}: {ax}"
         if let .thmInfo _ := ci then
           theorems := theorems + 1
+          let mod := env.header.moduleNames[idx]!
+          perModule := perModule.insert mod (perModule[mod]?.getD 0 + 1)
           logInfo m!"PROJECT_THEOREM_AXIOMS|{name}|{axioms}"
+  for (mod, minimum) in expectedTheorems do
+    let actual := perModule[mod]?.getD 0
+    if actual < minimum then
+      throwError "Theorem audit coverage too small for {mod}: {actual} < {minimum}"
+  if theorems < 649 then
+    throwError "Theorem audit is smaller than the source declaration inventory"
   if declarations == 0 || theorems == 0 then
     throwError "Audit scope was empty"
   logInfo m!"PROJECT_MODULES_CHECKED={projectModules.size}"

@@ -15,7 +15,7 @@ The mathematical result is a conditional theorem architecture and an endpoint-eq
 
 The original public names `Master_r3`, `Master_T3`, `Master_R3_details`, `Master_R3_derivation`, `Master_T3_details`, `Master_T3_derivation`, and `Feffermann-Classification` are retained exactly. Historical names containing `A_TIER` are source identities, not new certification claims.
 
-The v0.11.0 core contains all 36 modules of the attached v0.7.7 core and adds 10 modules. All seven recovered concrete predecessors through A/v0.24.0 are exact byte prefixes of the unified v0.25.0 module. They are archived rather than imported twice. Active mathematical source bytes are preserved; build integration and audits are new.
+The v0.11.0 core contains all 36 modules of the attached v0.7.7 core and adds 10 modules. All seven recovered concrete predecessors through A/v0.24.0 are exact byte prefixes of the unified v0.25.0 module. They are archived rather than imported twice. Fifty-eight active modules preserve their original bytes. The force-exponent classifier has one statement-preserving proof repair, recorded in [provenance/REPAIRS.md](provenance/REPAIRS.md); its original archive is unchanged. Build integration and audits are new.
 
 ## Endpoint map
 
@@ -36,7 +36,7 @@ The forcing classifier proves partitions of scalar exponent regions. Its `Actual
 
 ## Build and CI
 
-The workflow in [`.github/workflows/lean.yml`](.github/workflows/lean.yml) installs Lean on Linux and Windows runners, retrieves the compatible Mathlib cache, compiles every active module, and audits every project declaration by its originating module. It permits only `propext`, `Classical.choice`, and `Quot.sound` as axioms. Custom axioms, proof escapes, unsafe declarations, and unexpected axioms fail verification.
+The workflow in [`.github/workflows/lean.yml`](.github/workflows/lean.yml) installs Lean on Linux and Windows runners, retrieves the compatible Mathlib cache, compiles every active module, and audits every project declaration by its originating module. Per-module theorem counts must cover all 649 explicit source theorem/lemma declarations; generated auxiliary theorems are also audited. It permits only `propext`, `Classical.choice`, and `Quot.sound` as axioms. Custom axioms, proof escapes, unsafe declarations, and unexpected axioms fail verification.
 
 Mathlib is fixed at `db584cd6d46c92f209a44c0f1c829460d327499d` (v4.33.0); transitive revisions are locked in `lake-manifest.json`. The mathematical Layer A dependency closure is checked for physics imports. The reference Rocq collection is preserved for provenance; this Lean CI does not compile Rocq or certify a complete Rocq-to-Lean translation.
 
@@ -66,6 +66,6 @@ See [semantic review](provenance/SEMANTIC_REVIEW.md), [A–D source audit](prove
 
 ## Provenance
 
-[`provenance/sources.json`](provenance/sources.json) records archive identities and SHA-256 digests. [`provenance/active_source_origins.json`](provenance/active_source_origins.json) maps each active source to exact archive members. The original archives are in `provenance/archives/`; readable Rocq sources and their origin map are in `reference/rocq/` and `provenance/rocq_origins.json`.
+[`provenance/sources.json`](provenance/sources.json) records archive identities and SHA-256 digests. [`provenance/active_source_origins.json`](provenance/active_source_origins.json) maps each active source to exact archive members and records the single classifier repair as an exact, replayable edit with original and repaired hashes. Verification checks every archive and source origin, replays that edit against the preserved original, and rejects a changed or ambiguous patch. The original archives are in `provenance/archives/`; readable Rocq sources and their origin map are in `reference/rocq/` and `provenance/rocq_origins.json`.
 
 The GitHub source branch was recovered from `randogelist/stokes-conditional` at commit `4b370556eb008ba8a03f7019875f9595b094738f`. Original root archives and the main branch are retained. This consolidation is developed on `nse-fefferman-abcd-consolidated`.
