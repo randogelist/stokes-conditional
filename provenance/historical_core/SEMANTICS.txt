@@ -1,0 +1,116 @@
+CURRENT RELEASE NOTE -- v0.7.7
+v0.6.1 is now USER_REPORTED_PASS (174 theorem reports). All of its bodies are retained.
+Historical pending-compiler and no-instance statements below describe earlier releases.
+Use READ_ME.txt, KERNEL_RECONSTRUCTION.txt and RECONSTRUCTION_COVERAGE.tsv for current scope.
+The new scripts remain PENDING_USER_COMPILER. MR3_reconstructed/MT3_reconstructed
+add concrete internal port instances; physical endpoints remain open.
+
+FEFFERMAN NSE CLASSIFICATION -- SEMANTIC CONTRACT
+
+This is a Lean 4 skeleton with explicit formulas and conditional composition
+proofs. Analysis is an uninstantiated signature. This package does not construct
+the real numbers, derivatives, Lebesgue integrals, or an NSE solution.
+
+REALIZATION REQUIRED
+Scalar = the real numbers; zero/one/add/mul/neg/le/lt have their usual meanings.
+Space = Fin 3 -> real, with Euclidean norm norm3.
+dx is the coordinate partial derivative; dt is the time derivative within
+[0,infinity). Smoothness is C-infinity, including t=0 via smooth local extension.
+squareIntegrable v means integrability of ||v||^2 with respect to three-
+dimensional Lebesgue measure. integralNormSq v is that integral when finite.
+No theorem asserts that an arbitrary Analysis value has these properties.
+An actual mathlib realization and identification proofs are still required.
+
+All field values for t < 0 are representational extensions; the physical
+predicates quantify only over t >= 0. The derivative at t=0 uses the right-hand
+domain, so arbitrary negative-time values must not affect its interpretation.
+
+CLAUSE CONVENTIONS
+01 momentum; 02 incompressibility; 03 initial trace.
+04 every spatial derivative of the initial velocity decays faster than every
+   polynomial. 05 every mixed force derivative has joint space/time decay.
+06 velocity AND pressure are smooth on the closed positive time half-space.
+07 one finite energy bound C works at every t >= 0. Finiteness is explicit.
+08 spatial unit periodicity of initial velocity and force.
+09 every mixed force derivative has rapid time decay uniformly in space.
+10 spatial unit periodicity of solution velocity.
+11 smooth solution velocity and pressure, as in 06.
+The official appended erratum additionally requires periodic pressure.
+
+Decay is written in weighted form, with natural multi-indices and powers:
+norm(derivative) * weight^K <= C. The positive weights make this equivalent
+to the negative-power form after the real-analysis realization. The constants
+may depend on the derivative orders, K, and the chosen data, not on x or t.
+
+A/B require force identically zero and universal admissible initial data.
+C/D existentially choose admissible initial data AND admissible force.
+C/D assert there is no qualifying global pair (pressure,velocity).
+They are not defined as failure of one trajectory or of a numerical method.
+The torus is represented by periodic lifts on real three-space. No zero-mean
+condition, pressure gauge normalization, or whole-space energy bound is added
+to B/D. Both velocity and pressure are periodic.
+
+Each StatementAt fixes one positive viscosity. Statement quantifies over all
+positive viscosities. No normalization to nu=1 is assumed. Failure of the
+universal A yields C-at-some-viscosity, not C-for-every-viscosity by logic alone.
+
+PROOF STATUS
+No global research axiom declarations or proof-hole commands are present.
+Missing mathematics is expressed as record fields or theorem parameters.
+A zero axiom count does NOT mean those parameters have been supplied.
+The route observables are predicates awaiting genuine mathematical definitions.
+The Rocq proofs are not imported into Lean and are not automatically trusted.
+Only a successful run on the target Lean compiler establishes that the skeleton
+elaborates and its conditional proofs are kernel checked.
+
+An instance for a toy Scalar would only classify that toy interpretation.
+It would not establish a Fefferman statement about the real NSE.
+
+MASTER-THEOREM LAYER (v0.2.0)
+regularForceAt means the force is admissible and EVERY admissible initial
+datum has at least one qualifying global solution.
+breakdownForceAt means the force is admissible and SOME admissible initial
+datum has NO qualifying global solution. No uniqueness premise is added.
+The exact semantic alternatives are classically exhaustive and disjoint.
+
+ForceRegimes contains proposed certificate criteria, not analytic proofs.
+ForceRegimeSoundness contains the two required semantic implication proofs.
+unresolvedForceAt is relative to the criteria and asserts neither certificate.
+Certificate trichotomy is classical; it is not a computational classification.
+
+DomainMasterCore adds zero-force regular membership for every viscosity.
+DomainMaster additionally requires a certified breakdown force at each viscosity.
+MasterTheoremA is the whole-space DomainMaster. MasterTheoremB is the periodic
+DomainMaster. Neither is instantiated. Their conditional conjunction proofs
+are not proofs of the hypotheses or of an actual real NSE classification.
+
+Full regular-force coverage instead excludes breakdown at a fixed viscosity.
+It is incompatible with the positive-breakdown master at that viscosity.
+An infinite-time unbounded critical observable alone is not identified with
+finite-time singularity or nonexistence of a qualifying Fefferman solution.
+
+DERIVATION SEMANTICS (v0.4.0)
+Scalar laws, complex Fourier algebra, physical witness binding, integrated
+balance identities, uniform payment budgets, limit readouts, analytic exits
+and obstruction calibration are all explicit parameters. Finite algebra
+and the stated logical compositions are supplied as proof terms.
+R3 occupation-to-action still needs its named NSOA90 calculus port.
+T3 finite polynomial convolution is independent of the open physical
+Fourier-to-renewal realization; no unsupported analytic splice is asserted.
+The necessary bound in globalBoundsObstruction ranges over EVERY qualifying
+global pair for the same input, not just a selected trajectory.
+
+CURRENT SOURCE-ASSEMBLY SEMANTICS (v0.5.2)
+MR3 and MT3 now name R3EstablishedResults and T3EstablishedResults theorem
+collections. They preserve the original inputs of each branch. See
+MASTER_THEOREMS.txt and CROSS_BRANCH_STRUCTURE.txt for the exact distinction
+between source proof ports, source assumptions and physical identifications.
+Legacy positive-classification contracts remain available under their old
+names for compatibility, and are not definitions of the source collections.
+
+FINITE GEOMETRY (v0.6.1)
+The finite carrier is Nat -> Scalar, paired over i<n; tails are ignored.
+Radius nonnegativity is required only below n. The same scalar structure is
+used before and after transport. SourceDifference contains ordinary pairing
+laws and has a constructed finite-coordinate implementation. Isometry does
+not assert equality of private physical trajectories or continuum limits.

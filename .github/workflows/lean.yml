@@ -1,0 +1,136 @@
+name: Lean build and axiom audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lean-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Lean 4.33.0 / ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    env:
+      PYTHONUTF8: '1'
+      LEAN_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+
+      - name: Check source audit infrastructure
+        run: python -m unittest discover -s scripts -p "test_*.py"
+      - name: Check complete source inventory and Layer A firewall
+        run: python scripts/verify.py --prepare-only
+      - name: Require generated build files to be committed
+        run: git diff --exit-code -- All.lean lakefile.lean lean-toolchain scripts/KernelAudit.lean
+
+      - name: Restore compatible Lean toolchain
+        id: elan-cache
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: ~/.elan
+          key: elan-${{ runner.os }}-${{ runner.arch }}-4.1.2-${{ hashFiles('lean-toolchain') }}
+
+      - name: Install elan and pinned Lean (Linux)
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -x "$HOME/.elan/bin/elan" ]; then
+            elan_temp="$(mktemp -d)"
+            curl --fail --location --retry 3 --silent --show-error \
+              https://github.com/leanprover/elan/releases/download/v4.1.2/elan-x86_64-unknown-linux-gnu.tar.gz \
+              --output "$elan_temp/elan.tar.gz"
+            tar -xzf "$elan_temp/elan.tar.gz" -C "$elan_temp"
+            "$elan_temp/elan-init" -y --default-toolchain none --no-modify-path
+          fi
+          "$HOME/.elan/bin/elan" toolchain install "$(cat lean-toolchain)"
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Install elan and pinned Lean (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $elanExe = Join-Path $env:USERPROFILE '.elan\bin\elan.exe'
+          if (-not (Test-Path $elanExe)) {
+            $elanTemp = Join-Path $env:RUNNER_TEMP 'elan-bootstrap'
+            New-Item -ItemType Directory -Force -Path $elanTemp | Out-Null
+            $archive = Join-Path $elanTemp 'elan.zip'
+            Invoke-WebRequest -Uri 'https://github.com/leanprover/elan/releases/download/v4.1.2/elan-x86_64-pc-windows-msvc.zip' -OutFile $archive
+            Expand-Archive -Path $archive -DestinationPath $elanTemp -Force
+            & (Join-Path $elanTemp 'elan-init.exe') -y --default-toolchain none --no-modify-path
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
+          & $elanExe toolchain install (Get-Content lean-toolchain -Raw).Trim()
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Add-Content -Path $env:GITHUB_PATH -Value (Join-Path $env:USERPROFILE '.elan\bin')
+
+      - name: Save installed Lean toolchain
+        if: steps.elan-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: ~/.elan
+          key: ${{ steps.elan-cache.outputs.cache-primary-key }}
+
+      - name: Restore compatible Mathlib dependencies
+        id: mathlib-cache
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .lake/packages
+          key: mathlib-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}
+
+      - name: Fetch cached Mathlib
+        run: lake exe cache get
+
+      - name: Save verified dependency cache
+        if: steps.mathlib-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: .lake/packages
+          key: ${{ steps.mathlib-cache.outputs.cache-primary-key }}
+
+      - name: Restore project compilation traces
+        id: project-cache
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .lake/build
+          key: project-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-${{ hashFiles('*.lean', 'Fefferman/**/*.lean', 'NSE/**/*.lean', 'scripts/**') }}
+          restore-keys: |
+            project-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-
+
+      - name: Compile and audit every project declaration
+        run: python scripts/verify.py
+
+      - name: Save completed module compilation traces
+        if: always() && steps.project-cache.outputs.cache-primary-key != '' && steps.project-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: .lake/build
+          key: ${{ steps.project-cache.outputs.cache-primary-key }}
+
+      - name: Require immutable dependency resolution
+        run: git diff --exit-code -- lake-manifest.json lean-toolchain
+
+      - name: Upload build logs and anchoring receipt
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: lean-audit-${{ runner.os }}-${{ github.sha }}
+          path: artifacts/
+          if-no-files-found: warn
+          retention-days: 30

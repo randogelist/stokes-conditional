@@ -1,0 +1,244 @@
+{
+  "schema": 1,
+  "date": "2026-10-25",
+  "existing_github": {
+    "repository": "https://github.com/randogelist/stokes-conditional",
+    "commit": "4b370556eb008ba8a03f7019875f9595b094738f"
+  },
+  "sources": [
+    {
+      "identity": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7",
+      "source_kind": "attachment",
+      "source_filename": "01-FEF_NSE_CLASSIFICATION_LEAN_v0_7_7-1-.zip",
+      "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+      "sha256": "2f668a7d00358766d9f9c9d0d49a65ef8512c3043830deec38ef1017165b15cf",
+      "lean_files": 36,
+      "rocq_files": 0
+    },
+    {
+      "identity": "NSE_R3_FORCED_GP_DIAMOND_CRITICAL_CLASSES_v0_9_0",
+      "source_kind": "attachment",
+      "source_filename": "02-NSE_R3_FORCED_GP_DIAMOND_CRITICAL_CLASSES_v0_9_0.zip",
+      "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_CRITICAL_CLASSES_v0_9_0.zip",
+      "sha256": "3c4da55592a4d12caf913c07b6ebef24875e14627e9f44387b9b9e95671d2acc",
+      "lean_files": 0,
+      "rocq_files": 33
+    },
+    {
+      "identity": "NSE_R3_FORCED_GP_DIAMOND_SEPARATRIX_v0_10_0",
+      "source_kind": "attachment",
+      "source_filename": "03-NSE_R3_FORCED_GP_DIAMOND_SEPARATRIX_v0_10_0.zip",
+      "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_SEPARATRIX_v0_10_0.zip",
+      "sha256": "5c699d8dcca43dbcd124ed4a427ffaa1b789e073429084b98b2fb85b187a0c75",
+      "lean_files": 0,
+      "rocq_files": 34
+    },
+    {
+      "identity": "NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE_v0_11_1",
+      "source_kind": "attachment",
+      "source_filename": "04-NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE_v0_11_1.zip",
+      "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE_v0_11_1.zip",
+      "sha256": "b5b757973004575bee83b4c537eca28bb27c8c96843a6d65cd93117325432228",
+      "lean_files": 0,
+      "rocq_files": 35
+    },
+    {
+      "identity": "NSE_R3_FORCED_GP_DIAMOND_STOKES_DUALITY_v0_12_2",
+      "source_kind": "attachment",
+      "source_filename": "05-NSE_R3_FORCED_GP_DIAMOND_STOKES_DUALITY_v0_12_2.zip",
+      "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_STOKES_DUALITY_v0_12_2.zip",
+      "sha256": "f71895d2f22cc3e1d39fe2882268d6262546374bfd22ae9218135b3910aa7d23",
+      "lean_files": 0,
+      "rocq_files": 36
+    },
+    {
+      "identity": "NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS_v0_13_1",
+      "source_kind": "attachment",
+      "source_filename": "06-NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS_v0_13_1.zip",
+      "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS_v0_13_1.zip",
+      "sha256": "5230f5417a1a597a996db195312fb6e86275a7d35f8ba1b8200c24b35d5b1c8e",
+      "lean_files": 0,
+      "rocq_files": 37
+    },
+    {
+      "identity": "NSE_R3_FORCED_GP_DIAMOND_FORCE_ABSORPTION_v0_14_0",
+      "source_kind": "attachment",
+      "source_filename": "07-NSE_R3_FORCED_GP_DIAMOND_FORCE_ABSORPTION_v0_14_0.zip",
+      "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_FORCE_ABSORPTION_v0_14_0.zip",
+      "sha256": "b43e11d413290903ead6c2129a048c0fcbf8db2c9bd8eb7ff8bce7093c6856b2",
+      "lean_files": 0,
+      "rocq_files": 38
+    },
+    {
+      "identity": "NSE_R3_FORCED_GP_DIAMOND_ACCUMULATOR_BRIDGE_v0_15_3",
+      "source_kind": "attachment",
+      "source_filename": "08-NSE_R3_FORCED_GP_DIAMOND_ACCUMULATOR_BRIDGE_v0_15_3.zip",
+      "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_ACCUMULATOR_BRIDGE_v0_15_3.zip",
+      "sha256": "35ece09f30885418a961ce147182e9cfe8f9c4171f09d822149c2620727bdab3",
+      "lean_files": 0,
+      "rocq_files": 39
+    },
+    {
+      "identity": "NSE_R3_FORCED_GP_DIAMOND_CRITICAL_BALANCE_BRIDGE_v0_16_1",
+      "source_kind": "attachment",
+      "source_filename": "09-NSE_R3_FORCED_GP_DIAMOND_CRITICAL_BALANCE_BRIDGE_v0_16_1.zip",
+      "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_CRITICAL_BALANCE_BRIDGE_v0_16_1.zip",
+      "sha256": "8c05339028293ebd927b6d8305efafc97e87d43b87ffce21046e5bbc0678f9a2",
+      "lean_files": 0,
+      "rocq_files": 40
+    },
+    {
+      "identity": "NSE_GP_FORCING_CLASSIFICATION_v0_1_0",
+      "source_kind": "attachment",
+      "source_filename": "10-NSE_GP_FORCING_CLASSIFICATION_v0_1_0.zip",
+      "archive": "provenance/archives/NSE_GP_FORCING_CLASSIFICATION_v0_1_0.zip",
+      "sha256": "e87ceb49cfb224160e12571a5e6c63f7c56e75c503a96c049db6efeeb4fc0ca6",
+      "lean_files": 0,
+      "rocq_files": 40
+    },
+    {
+      "identity": "NSE_GP_FORCING_CLASSIFICATION_v0_1_1",
+      "source_kind": "attachment",
+      "source_filename": "11-NSE_GP_FORCING_CLASSIFICATION_v0_1_1.zip",
+      "archive": "provenance/archives/NSE_GP_FORCING_CLASSIFICATION_v0_1_1.zip",
+      "sha256": "2e768ab03e9c1b258050db4c5ae04cbf4ab606177eb6701121c14ba4c1f0834c",
+      "lean_files": 0,
+      "rocq_files": 40
+    },
+    {
+      "identity": "NSE_FORCING_REGULARITY_CLASSES_LEAN_v0_1_4",
+      "source_kind": "attachment",
+      "source_filename": "12-NSE_FORCING_REGULARITY_CLASSES_LEAN_v0_1_4.zip",
+      "archive": "provenance/archives/NSE_FORCING_REGULARITY_CLASSES_LEAN_v0_1_4.zip",
+      "sha256": "e9d4c32fb41833ef02b4835131b5825888bd919e099ee6b8dfc85e333bf0bba7",
+      "lean_files": 1,
+      "rocq_files": 0
+    },
+    {
+      "identity": "NSE_R3_FORCED_GP_DIAMOND_UNIFORM_CUTOFF_M7_v0_21_1",
+      "source_kind": "attachment",
+      "source_filename": "13-NSE_R3_FORCED_GP_DIAMOND_UNIFORM_CUTOFF_M7_v0_21_1.zip",
+      "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_UNIFORM_CUTOFF_M7_v0_21_1.zip",
+      "sha256": "6996cc85131ef896e746f2590010eae6854457595cde6316e43746342796fa14",
+      "lean_files": 0,
+      "rocq_files": 51
+    },
+    {
+      "identity": "NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST_v0_22_0",
+      "source_kind": "attachment",
+      "source_filename": "14-NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST_v0_22_0.zip",
+      "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST_v0_22_0.zip",
+      "sha256": "7afefb6f87ac3edbf719dc736af8bc4331fb7b27704313b48f1871a2bbe065cf",
+      "lean_files": 0,
+      "rocq_files": 52
+    },
+    {
+      "identity": "FEF_NSE_ABCD_A_TIER_UNIFIED_CLOSURE_LEAN_v0_25_0",
+      "source_kind": "attachment",
+      "source_filename": "15-FEF_NSE_ABCD_A_TIER_UNIFIED_CLOSURE_LEAN_v0_25_0-1-.zip",
+      "archive": "provenance/archives/FEF_NSE_ABCD_A_TIER_UNIFIED_CLOSURE_LEAN_v0_25_0.zip",
+      "sha256": "463dec3a7e1638c5e078dcfe732a9648a8ed129ce3dc7ec54b9aaa949b42e19c",
+      "lean_files": 1,
+      "rocq_files": 0
+    },
+    {
+      "identity": "FEF_NSE_CONCRETE_PERIODIZATION_TRANSLATION_CLOSED_LEAN_v0_20_26_PASSFIX",
+      "source_kind": "recovered_branch",
+      "source_filename": "FEF_NSE_CONCRETE_PERIODIZATION_TRANSLATION_CLOSED_LEAN_v0_20_26_PASSFIX.zip",
+      "archive": "provenance/archives/FEF_NSE_CONCRETE_PERIODIZATION_TRANSLATION_CLOSED_LEAN_v0_20_26_PASSFIX.zip",
+      "sha256": "647f6188bb40ed44a3d474620dd2f93175b3a8d89af151f79144df8ae4a1c367",
+      "lean_files": 1,
+      "rocq_files": 0
+    },
+    {
+      "identity": "FEF_NSE_CONCRETE_SOURCE_RESCALING_LEAN_v0_20_27",
+      "source_kind": "recovered_branch",
+      "source_filename": "FEF_NSE_CONCRETE_SOURCE_RESCALING_LEAN_v0_20_27.zip",
+      "archive": "provenance/archives/FEF_NSE_CONCRETE_SOURCE_RESCALING_LEAN_v0_20_27.zip",
+      "sha256": "e0c9107ab60337aef458cf34921d367a4310cfb18e5185c506a23e84ec94cc28",
+      "lean_files": 1,
+      "rocq_files": 0
+    },
+    {
+      "identity": "FEF_NSE_COROLLARY106_DELAYED_RESCALING_LEAN_v0_20_29_PASSFIX",
+      "source_kind": "recovered_branch",
+      "source_filename": "FEF_NSE_COROLLARY106_DELAYED_RESCALING_LEAN_v0_20_29_PASSFIX.zip",
+      "archive": "provenance/archives/FEF_NSE_COROLLARY106_DELAYED_RESCALING_LEAN_v0_20_29_PASSFIX.zip",
+      "sha256": "b9cc9c2745f21b33f97d2dbf28acb1324b0c072d0f0183a39e26fc0d96586a78",
+      "lean_files": 1,
+      "rocq_files": 0
+    },
+    {
+      "identity": "FEF_NSE_PERIODIC_B_A_TIER_CLOSURE_LEAN_v0_21_1_FIX1",
+      "source_kind": "recovered_branch",
+      "source_filename": "FEF_NSE_PERIODIC_B_A_TIER_CLOSURE_LEAN_v0_21_1_FIX1.zip",
+      "archive": "provenance/archives/FEF_NSE_PERIODIC_B_A_TIER_CLOSURE_LEAN_v0_21_1_FIX1.zip",
+      "sha256": "38e71895b11ea8ab0168ff9ac0e6f4b12b55e96c0c634963a943de443d471803",
+      "lean_files": 1,
+      "rocq_files": 0
+    },
+    {
+      "identity": "FEF_NSE_PERIODIC_D_A_TIER_CLOSURE_LEAN_v0_22_2_FIX2",
+      "source_kind": "recovered_branch",
+      "source_filename": "FEF_NSE_PERIODIC_D_A_TIER_CLOSURE_LEAN_v0_22_2_FIX2.zip",
+      "archive": "provenance/archives/FEF_NSE_PERIODIC_D_A_TIER_CLOSURE_LEAN_v0_22_2_FIX2.zip",
+      "sha256": "c708fdb5e840d7c73e788b6300d8c3e6db80bd060162f06a41bb9a8011f08011",
+      "lean_files": 1,
+      "rocq_files": 0
+    },
+    {
+      "identity": "FEF_NSE_WHOLESPACE_A_A_TIER_CLOSURE_LEAN_v0_24_0",
+      "source_kind": "recovered_branch",
+      "source_filename": "FEF_NSE_WHOLESPACE_A_A_TIER_CLOSURE_LEAN_v0_24_0.zip",
+      "archive": "provenance/archives/FEF_NSE_WHOLESPACE_A_A_TIER_CLOSURE_LEAN_v0_24_0.zip",
+      "sha256": "b078a60028a77d39dddbeecceebd65e7da774883aa6924e635a4e0c9562d6681",
+      "lean_files": 1,
+      "rocq_files": 0
+    },
+    {
+      "identity": "FEF_NSE_WHOLESPACE_C_A_TIER_CLOSURE_LEAN_v0_23_0",
+      "source_kind": "recovered_branch",
+      "source_filename": "FEF_NSE_WHOLESPACE_C_A_TIER_CLOSURE_LEAN_v0_23_0.zip",
+      "archive": "provenance/archives/FEF_NSE_WHOLESPACE_C_A_TIER_CLOSURE_LEAN_v0_23_0.zip",
+      "sha256": "0d65fb3a889891a19360d3ba9491034962cdb8e2281d9b25840c1b6663e61afd",
+      "lean_files": 1,
+      "rocq_files": 0
+    },
+    {
+      "identity": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0",
+      "source_kind": "recovered_branch",
+      "source_filename": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+      "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+      "sha256": "bddd0a0b0a6a38b343002bf141e902bfb1cf8664770e910882778f4037bdefb8",
+      "lean_files": 46,
+      "rocq_files": 0
+    },
+    {
+      "identity": "NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6",
+      "source_kind": "recovered_branch",
+      "source_filename": "NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6.zip",
+      "archive": "provenance/archives/NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6.zip",
+      "sha256": "0dbf1a350e123a595d9921ebade4cb9c4b2713bcf6e0bc0c4d8163ab2742d100",
+      "lean_files": 0,
+      "rocq_files": 77
+    },
+    {
+      "identity": "NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0",
+      "source_kind": "existing_github",
+      "source_filename": "NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0 (2).zip",
+      "archive": "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0.zip",
+      "sha256": "5276e905f15575363f65c6560dfc69ada07b9aed07b0b1e1902f51fe0807cd70",
+      "lean_files": 12,
+      "rocq_files": 0
+    },
+    {
+      "identity": "NSE_LH_GP_BKQR_M7_SERRIN_v0_1_0",
+      "source_kind": "existing_github",
+      "source_filename": "NSE_LH_GP_BKQR_M7_SERRIN_v0_1_0 (2).zip",
+      "archive": "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_v0_1_0.zip",
+      "sha256": "5fba06fc3d2c55ca0518d050280b5723fa9137ef2930063a8e235845d4700fbb",
+      "lean_files": 0,
+      "rocq_files": 116
+    }
+  ]
+}

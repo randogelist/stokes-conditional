@@ -1,0 +1,56 @@
+id	obligation	status	formal_location
+F01	Real numbers, field/order laws, Euclidean geometry, derivatives, smoothness and Lebesgue integral realization	OPEN	Analysis; SEMANTICS.txt
+F02	Identify weighted clauses with the official real-analysis statements, including periodic-pressure erratum	OPEN	clause01 through clause11; periodicPressureErratum
+F03	Prove zero force admissible in each real-analysis domain	OPEN	ZeroForceAdmissible
+F04	Actual local/maximal R3 solution type and same-input binding	OPEN	LocalTheory
+F05	Local existence and globalize preserving every Fefferman output clause	OPEN	LocalTheoryPorts
+F06	Bind all QUATROS observables to that same physical solution	OPEN	QuatrosObservables
+F07	Five QUATROS internal fields reconstructed for concrete source-derived observables	PROOF_SCRIPTS_PENDING_USER_COMPILER	reconstructed_quatros_port
+F08	Derive physical insertion from arbitrary admissible R3 NSE data/trajectory	OPEN	QuatrosEndpointPorts.insert
+F09	Analytic same-solution classical continuation from the realized Serrin observable	OPEN	QuatrosEndpointPorts.classicalExit
+F10	MAOTAOTROS internal critical field reconstructed; lower modal/packet witness construction still partial	PARTIAL_RECONSTRUCTION_PENDING_USER_COMPILER	reconstructed_maotaotros_port; KernelSourceRates
+F11	MAOTAOTROS physical entrance and Fefferman global-output calibration	OPEN	MaotaotrosEndpointPorts
+F12	Covariance physical-prefix realization and actual uniform renewal payment	OPEN	CovarianceEndpointPorts.realization; payment
+F13	Covariance prefix port reconstructed; physical Sobolev realization and regularity exit remain	PREFIX_SCRIPT_PRESENT_ANALYTIC_EXIT_OPEN	reconstructed_covariance_port; CovarianceEndpointPorts
+F14	Periodic analytic theory and domain-specific binding for case B	OPEN	B_of_continuation; B_from_periodic_COVARIANCE
+F15	Admissible data/force with proof that no qualifying global solution exists	OPEN	BreakdownWitnessAt; C_of_witness_family; D_of_witness_family
+F16	Optional viscosity scaling if reducing to one reference viscosity	NOT_ASSUMED	statementAt versus statement
+F17	Define concrete regular and breakdown force certificates for each domain and viscosity	OPEN	ForceRegimes
+F18	Prove regular certificate soundness with every required global-solution clause	OPEN	ForceRegimeSoundness.regularSound
+F19	Prove breakdown certificate soundness: admissible force and datum with no qualifying global pair	OPEN	ForceRegimeSoundness.breakdownSound
+F20	Prove zero forcing belongs to the regular certificate regime at every positive viscosity	OPEN	DomainMasterCore.zeroRegular
+F21	Construct an admissible certified breakdown force at every positive viscosity	OPEN	DomainMaster.breakdownNonempty
+F22	Instantiate the R3 and periodic master statements for actual NSE	OPEN	MasterTheoremA; MasterTheoremB
+F23	Instantiate ordinary scalar/division laws with actual real analysis	OPEN	LedgerArithmetic
+F24	Realize same-input R3 storage, kinetic payments and strict high absorption	OPEN	R3StorageWitness; regularRepresents; realizeRegular
+F25	Translate the differential-comparison and action envelope proof NSOA90	OPEN	R3StorageWitness.occupationToAction
+F26	Realize actual complex unit-periodic characters and integer-mode geometry	OPEN	T3FourierAlgebra; periodic chart and mean-mode calibration
+F27	Realize actual periodic renewal, cut-uniform paid budget and cofinal samples	OPEN	T3RenewalWitness; regularRepresents; realizeRegular
+F28	Derive forced critical balances and same-input full limit readouts	OPEN	criticalBalance; massReadout; dissipationReadout
+F29	Prove exact global-solution exit from the supplied critical control	OPEN	RegularDerivationPorts.regularExit
+F30	Bind exact net-work witness and prove a necessary bound for every global solution	OPEN	ObstructionDerivationPorts
+F31	Construct a certified breakdown-force family at each positive viscosity	OPEN	R3_derive_master; T3_derive_master nonempty argument
+CB01	NSSC10_SIGNED_SOURCE_INTEGRATION_WITHOUT_LH: GPSourceWitness51 modal dynamics and derivative primitives	INTEGRATION_SCRIPT_PRESENT_LOWER_MODAL_PORT_PENDING	KernelCalculus; KernelPackets; CanonicalSource
+CB02	NSSC21_ACTUAL_COUPLED_INTEGRATED_BALANCE: GPSourceWitness51; same modal path	INTEGRATION_SCRIPT_PRESENT_LOWER_MODAL_PORT_PENDING	KernelCalculus; KernelPackets; CanonicalSource
+CB03	NSSJ12_ACTUAL_SOURCE_CELLS_NONNEGATIVE: Actual nonnegative source derivative and SourceGrid51	INTEGRATION_SCRIPT_PRESENT_LOWER_MODAL_PORT_PENDING	KernelCalculus; KernelPackets; CanonicalSource
+CB04	Finite spectral identities implemented; physical source insertion and continuum realization remain separate	USER_REPORTED_PASS_V0_6_1_PHYSICAL_BINDING_OPEN	FiniteSpectral; R3SpectralBinding
+CB05	NSBF31 reduced-capacity transport implemented by a direct coefficient proof	USER_REPORTED_PASS_V0_6_1_PHYSICAL_BINDING_OPEN	R3_frame_mellin_preserves_capacity
+CB06	NSBH00/11/13 factorization and heat symbol positivity: Ordinary real polynomial and exponential facts	ROCQ_PROOF_PRESENT_LEAN_PORT_PENDING	Future heat-symbol algebra port
+CB07	Signed production budget reconstructed from canonical local excess and paid-prefix hypotheses	CONDITIONAL_SCRIPT_PENDING_USER_COMPILER	canonical_source_signed_budget
+CB08	BKQRHeatFiniteFrame; MellinFiniteRealization: Actual heat square-frame integral and Mellin-Plancherel pairing	CONTINUUM_REALIZATION_PENDING	R3HeatFrame; R3MellinRealization
+CB09	GPSourceWitness51: Actual R3 NSE same-source insertion and retained spectral residual	PHYSICAL_IDENTIFICATION_PENDING	R3SourceLedger physical realization
+CB10	LH50_00/10/11 actual character integration: Actual normalized iterated Riemann integral, trigonometric primitives; source compiler status unconfirmed	ROCQ_PROOF_PRESENT_LEAN_PORT_PENDING	T3IntegralCalculus.atomOrthogonality
+CB11	LH49_33_POLYNOMIAL_MODE_RETAINS_ENERGY_BOUND: SpectralL2Bound; finite cutoffs without repeated modes	ROCQ_PROOF_PRESENT_LEAN_PORT_PENDING	T3CompletionPort.polynomialBound
+CB12	LH49_41_UNCONDITIONAL_POLYNOMIAL_PRODUCT_LIMIT: Constructed Bcomplete; two independent exhaustive finite cutoffs	ROCQ_PROOF_PRESENT_LEAN_PORT_PENDING	T3CompletionPort.polynomialLimit
+CB13	Bcomplete physical interpretation: Physical L2 density/completeness and L2 product to L1 coefficient continuity	PHYSICAL_IDENTIFICATION_PENDING	Physical completion beyond finite polynomials
+CB14	Periodic GP renewal and critical exit: Concrete GP power-weight summation, time calculus and critical transfer not supplied by this source	SOURCE_BOUNDARY_OPEN	T3RenewalWitness physical binding
+G01	Construct projection orthogonality, normal-equation solutions, minimizers and action bounds from the source	ROCQ_PROOF_PRESENT_LEAN_PORT_PENDING	NSGG00/10/11/13/15/20/21
+G02	Instantiate vectorIsEmbed for a physical source ledger and construct its actual primitive	OPEN	R3SpectralBinding; R3_h32_primitive_transport
+G03	Relate finite weighted sums to actual continuum R3 Sobolev norms	OPEN	FiniteSpectral; analytic realization
+K01	Instantiate the ordinary scalar and time calculus records in real analysis	ANALYTIC_REALIZATION_OPEN	KernelArithmetic; KernelCalculus
+K02	Translate the physical single-triad step and construct actual causal/birth witnesses	SOURCE_TRANSLATION_AND_PHYSICAL_INSERTION_PARTIAL	NSHP01; KernelBirthWitness
+K03	Construct integrating factors on actual finite-time intervals and realize their grids	ANALYTIC_INTERPRETATION_OPEN	KernelTimeExhaustion; factorDerivative
+K04	Construct actual packet/modal derivatives, weighted census and source reconstruction	EXISTING_ROCQ_PROOFS_PARTLY_UNTRANSLATED	KernelSourceRates; KernelPackets
+K05	Supply canonical paid-prefix bound and local excess estimate for the physical source	RETAINED_SOURCE_HYPOTHESES	CanonicalSourceRenewal.paidBound; localExcess
+K06	Translate remaining dyadic covariance, positive-part action and zero-capacity completion algebra	EXISTING_ROCQ_PROOFS_PARTLY_UNTRANSLATED	B03-B05; B09-B12; B14
+K07	Native compilation of the new v0.7.7 proof scripts	PENDING_USER_COMPILER	run.cmd; Audit.lean

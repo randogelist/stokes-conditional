@@ -1,0 +1,64 @@
+From Stdlib Require Import Reals.
+Require Import LHGP_Coordinates LHGP_Readouts LHGP_Transport LHGP_Hilbert.
+Require Import LHGP_Dual LHGP_Gradient LHGP_Evolution LHGP_Equivalence.
+Require Import LHGP_HilbertSchur LHGP_NativeKQ LHGP_NativeDiagonal.
+Require Import LHGP_DissipationTopology LHGP_SobolevGraph LHGP_Completion040.
+
+(* Full types expose premises; Print Assumptions exposes logical foundations.
+   Neither command establishes the concrete R3 instance. *)
+Print NativeGP.gp_pull.
+Print NativeGP.gp_push.
+Print NativeGP.gp_metric.
+Print NativeDiagonalL2.
+Print NativeDiagonalEnergy.
+Print NativeGram.PSD4.
+Print HilbertGram4.
+Print NativeDecodedGram4.
+Print HReducedCapacity.
+Print HWeakSequential.
+Print DissipationSublevel.
+Print InfiniteDissipation.
+Print GradientGraph.
+Print GraphEnergy.
+Print GraphCauchy.
+Print GraphConverges.
+
+Check NATIVE_DIAGONAL_ENERGY_CLASS_EXACT.
+Check NATIVE_DIAGONAL_STATE_REALIZATION.
+Check NATIVE_DIAGONAL_PAIRING_COMPLETION.
+Check NATIVE_DIAGONAL_PATH_REALIZATION.
+Check LHGP_NATIVE_GP_GRAM_FINITE_REALIZATION.
+Check LHGP_NATIVE_GP_GRAM_COMPLETION_STATE.
+Check HSG10_RANK_SAFE_ORTHOGONALITY.
+Check HSG15_RESIDUAL_PYTHAGORAS.
+Check HSG15_CAPACITY_MINIMAL.
+Check HSG20_SCHUR_ACTION_BOUND.
+Check HSG21_ZERO_CAPACITY_ZERO_RENEWAL.
+Check DISSIPATION_SUBLEVEL_IFF_GRADIENT_BOUND.
+Check DISSIPATION_INFINITE_IFF_NO_GRADIENT.
+Check DISSIPATION_SUBLEVEL_WEAK_LIMINF.
+Check GRADIENT_GRAPH_WEAK_CLOSED.
+Check SOBOLEV_GRAPH_COMPLETE.
+Check SOBOLEV_GRAPH_ENERGY_CONTINUOUS.
+Check LHGP_NATIVE_LH_TRAJECTORY_EQUIVALENCE.
+Check LHGP_NATIVE_LH_GRAM_REALIZATION.
+Check LHGP_NATIVE_GP_WEAK_LIMIT_HAS_GRADIENT.
+Check LHGP_NATIVE_GRAPH_COMPLETION.
+
+Print Assumptions NATIVE_DIAGONAL_ENERGY_CLASS_EXACT.
+Print Assumptions NATIVE_DIAGONAL_STATE_REALIZATION.
+Print Assumptions NATIVE_DIAGONAL_PAIRING_COMPLETION.
+Print Assumptions NATIVE_DIAGONAL_PATH_REALIZATION.
+Print Assumptions LHGP_NATIVE_GP_GRAM_COMPLETION_STATE.
+Print Assumptions HSG15_RESIDUAL_PYTHAGORAS.
+Print Assumptions HSG20_SCHUR_ACTION_BOUND.
+Print Assumptions HSG21_ZERO_CAPACITY_ZERO_RENEWAL.
+Print Assumptions DISSIPATION_SUBLEVEL_WEAK_LIMINF.
+Print Assumptions DISSIPATION_INFINITE_IFF_NO_GRADIENT.
+Print Assumptions GRADIENT_GRAPH_WEAK_CLOSED.
+Print Assumptions SOBOLEV_GRAPH_COMPLETE.
+Print Assumptions SOBOLEV_GRAPH_ENERGY_CONTINUOUS.
+Print Assumptions LHGP_NATIVE_LH_TRAJECTORY_EQUIVALENCE.
+Print Assumptions LHGP_NATIVE_LH_GRAM_REALIZATION.
+Print Assumptions LHGP_NATIVE_GP_WEAK_LIMIT_HAS_GRADIENT.
+Print Assumptions LHGP_NATIVE_GRAPH_COMPLETION.

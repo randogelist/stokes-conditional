@@ -1,0 +1,299 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,array,longtable}
+\usepackage[margin=27mm,headheight=14pt]{geometry}
+\usepackage{microtype,xcolor,xurl,hyperref,fancyhdr,enumitem}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,citecolor=blue!45!black,pdftitle={A Domain-Indexed Framework for Generalized Fefferman Force Classification},pdfsubject={Source-backed research preprint; conditional formal architecture}}
+\urlstyle{tt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Generalized Fefferman force classification}
+\fancyhead[R]{\small Research draft 0.1}
+\fancyfoot[C]{\thepage}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\setlist{nosep,leftmargin=1.5em}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{definition}[proposition]{Definition}
+\newtheorem{corollary}[proposition]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[proposition]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Reg}{\mathcal R}
+\newcommand{\Bad}{\mathcal B}
+\newcommand{\Adm}{\mathcal F_{\mathrm{adm}}}
+\newcommand{\code}[1]{\nolinkurl{#1}}
+\newcommand{\verified}{\textsf{Lean-source result}}
+\newcommand{\rocq}{\textsf{Rocq-source result}}
+\newcommand{\editorial}{\textsf{Manuscript deduction}}
+\title{\vspace{-1.2cm}A Domain-Indexed Framework for\\Generalized Fefferman Force Classification}
+\author{Source synthesis for the \texttt{randogelist/stokes-conditional} project}
+\date{Preprint version 0.1 \quad\textbullet\quad 25 October 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+\begin{abstract}
+We organize the recovered Navier--Stokes project sources around a force-resolved classification indexed by domain and positive viscosity. The semantic regular class requires a qualifying global solution for every admissible initial datum; its breakdown counterpart requires one admissible datum for which no such solution exists. Classical logic gives an exhaustive, disjoint semantic partition. Sound research criteria need not cover that partition and therefore admit an unresolved certification region. We explain how the four Fefferman endpoints arise as projections, how witness-parametric derivations supply sound certificates, and how relative GP budgets, intrinsic force absorption, and storage constructions enter the same architecture. The accompanying Lean source anchor compiled and passed a declaration-level axiom audit on Linux and Windows. The additional Rocq sources are traced but were not compiled by that Lean workflow. This preprint is a verification and architecture report: it establishes no unconditional physical Fefferman endpoint and supplies no complete effective classifier of physical forces.
+\end{abstract}
+
+\section{Scope and source anchor}
+The purpose of this note is to identify the most general classification structure actually represented in the recovered sources, rather than to infer mathematical strength from archive versions or names. The broadest Lean interface is the pair
+\[
+  \text{\texttt{ForceRegimes}}\ a\ d,
+  \qquad \text{\texttt{ForceRegimeSoundness}}\ a\ d\ r.
+\]
+The analysis interpretation $a$ supplies the scalar operations and analytic predicates. The domain $d$ is either whole space or the periodic domain; spatial dimension remains three. At the Rocq level, the analogous framework is parameterized by arbitrary data, force, and solution types and by their admissibility and solution predicates. This additional logical generality does not construct a new physical model.
+
+The verified source commit is
+\begin{center}\small\code{26bc074c2b8ebf57fa0fabcf9b8263673de9d80b}.\end{center}
+Throughout, \verified\ means that a corresponding declaration occurs in the Lean source set audited at that commit. \rocq\ identifies an inspected source theorem, without a fresh Rocq build claim. \editorial\ labels a consequence proved in this manuscript but not added as a new Lean declaration. None of these labels asserts independent equivalence of the full implementation with the official PDE specification.
+
+\clearpage
+\section{Semantic classes and certificate classes}
+Fix a domain $d$, a positive viscosity $\nu$, a type $I$ of initial data, a type $F$ of forces, and a type $S$ of solutions. Write $I_d(u_0)$ and $F_d(f)$ for admissibility, and $G_{d,\nu}(u_0,f,s)$ for the specified qualifying global-solution predicate. Set
+\[
+ H_{d,\nu}(u_0,f)\;:\!\Longleftrightarrow\;
+ \exists s\in S,\ G_{d,\nu}(u_0,f,s).
+\]
+The Lean realization uses \code{admissibleInitial}, \code{admissibleForce}, \code{globalSolution}, and \code{hasGlobalSolution} in \code{Fefferman/Statements.lean} [2]. For propositions labeled \verified, take $I=\mathrm{Initial}(a)$, $F=\mathrm{Force}(a)$, and $S=\mathrm{Solution}(a)$; the arbitrary-type presentation expresses the same logical argument without claiming a broader exported Lean signature. In particular, breakdown concerns nonexistence of a qualifying global solution, not failure of a chosen approximation or of one sufficient estimate.
+
+\begin{definition}[Semantic force classes]
+For fixed $(d,\nu)$, define
+\begin{align}
+ f\in\Reg_{d,\nu}
+ &\Longleftrightarrow F_d(f)\ \land\
+       \forall u_0,\ I_d(u_0)\Rightarrow H_{d,\nu}(u_0,f),\label{eq:reg}\\
+ f\in\Bad_{d,\nu}
+ &\Longleftrightarrow F_d(f)\ \land\
+       \exists u_0,\ I_d(u_0)\land\neg H_{d,\nu}(u_0,f).\label{eq:bad}
+\end{align}
+These are \code{regularForceAt} and \code{breakdownForceAt}.
+\end{definition}
+
+\begin{proposition}[Semantic partition; \verified]\label{prop:partition}
+In classical logic,
+\[
+ \Adm(d)=\Reg_{d,\nu}\mathbin{\dot\cup}\Bad_{d,\nu},
+ \qquad \Adm(d)=\{f:F_d(f)\}.
+\]
+\end{proposition}
+\begin{proof}
+Membership in both classes would give an admissible datum with both $H$ and $\neg H$. Conversely, for an admissible $f$, either every admissible datum satisfies $H$, or the negation of that universal assertion supplies an admissible datum satisfying $\neg H$. The latter step uses classical quantifier negation.
+\end{proof}
+The corresponding declarations are \code{regularForceAt_excludes_breakdownForceAt} and \code{admissibleForce_regular_or_breakdown}. This partition is logical, not a terminating classification procedure. It also does not decide which class contains any specified physical force.
+
+\begin{definition}[Sound certificates]
+Let $r_R(\nu,f)$ and $r_B(\nu,f)$ be research criteria. Soundness means
+\[
+ r_R(\nu,f)\Rightarrow f\in\Reg_{d,\nu},
+ \qquad r_B(\nu,f)\Rightarrow f\in\Bad_{d,\nu}.
+\]
+The unresolved region is
+\[
+ U_r(d,\nu)=\{f:F_d(f)\land\neg r_R(\nu,f)\land\neg r_B(\nu,f)\}.
+\]
+\end{definition}
+
+\begin{proposition}[Certificate trichotomy; \verified]
+Every admissible force satisfies $r_R$, $r_B$, or membership in $U_r$. If the criteria are sound, these alternatives are pairwise disjoint.
+\end{proposition}
+\begin{proof}
+Apply excluded middle first to $r_R$ and then to $r_B$. Soundness and Proposition~\ref{prop:partition} exclude simultaneous positive and negative certificates; the definition of $U_r$ excludes either certificate there.
+\end{proof}
+The source declarations \code{admissibleForce_certificate_trichotomy} and \code{certified_regimes_disjoint} establish the substantive parts. Unresolved is a state of certification, not a third semantic truth value or a third type of NSE evolution.
+
+\section{The generalized list and its four projections}
+The official problem distinguishes whole-space and periodic solutions and unforced smoothness from existence of a forced breakdown example [1]. Our symbols denote the project predicates; the remaining PDE-identification issue is stated in Section~\ref{sec:frontier}.
+
+For any force family $\mathcal C\subseteq\Adm(d)$, introduce the manuscript notation
+\begin{align}
+ \mathsf{AllRegular}_{d,\nu}(\mathcal C)
+ &\Longleftrightarrow \forall f\in\mathcal C,\ f\in\Reg_{d,\nu},\\
+ \mathsf{SomeBreakdown}_{d,\nu}(\mathcal C)
+ &\Longleftrightarrow \exists f\in\mathcal C,\ f\in\Bad_{d,\nu}.
+\end{align}
+This is a force-family-indexed presentation of the existing semantics, not an additional exported Lean object.
+
+\begin{corollary}[Force-family duality; \editorial]
+For $\mathcal C\subseteq\Adm(d)$,
+\[
+ \mathsf{AllRegular}_{d,\nu}(\mathcal C)
+ \quad\Longleftrightarrow\quad
+ \neg\mathsf{SomeBreakdown}_{d,\nu}(\mathcal C).
+\]
+\end{corollary}
+\begin{proof}
+The forward direction follows from disjointness. For the reverse direction, take any $f\in\mathcal C$ and apply Proposition~\ref{prop:partition}; its breakdown alternative contradicts the assumed negation.
+\end{proof}
+
+Assuming zero force is admissible, the fixed-viscosity projections are:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Case & Domain & Force-resolved expression\\
+\midrule
+$A_\nu$ & $\R^3$ & $0\in\Reg_{\R^3,\nu}$\\
+$B_\nu$ & $\T^3$ & $0\in\Reg_{\T^3,\nu}$\\
+$C_\nu$ & $\R^3$ & $\Bad_{\R^3,\nu}\ne\varnothing$\\
+$D_\nu$ & $\T^3$ & $\Bad_{\T^3,\nu}\ne\varnothing$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The source definitions $A,B,C,D$ quantify these respective predicates over every positive viscosity. A witness force for $C_\nu$ or $D_\nu$ may depend on $\nu$. No normalization theorem or single force uniform in viscosity is silently substituted.
+
+\subsection{Why the master contract is not the most general classifier}
+The record \code{DomainMasterCore} adds soundness and certification of zero force at every viscosity. The stronger \code{DomainMaster} additionally requires
+\[
+ \forall\nu>0,\ \exists f,\ r_B(\nu,f).
+\]
+Consequently, the whole-space and periodic master contracts imply $A\land C$ and $B\land D$, respectively. Their breakdown-nonemptiness fields are hypotheses, not constructed counterexamples.
+
+The broader certificate interface also permits $r_B\equiv\mathrm{False}$. The existing \code{R3IntrinsicForceRegimes} uses precisely this choice. Given both an embedding of every admissible force into its intrinsic class and a global-closure theorem for that class, it yields regularity for all admissible forces and excludes breakdown at every positive viscosity. The source conclusion $A\land\neg C$ additionally takes one positive viscosity inhabitant: an arbitrary abstract \code{Analysis} does not guarantee that its positive-viscosity type is inhabited. These alternative contracts must not be combined after discarding their distinct premises.
+
+\section{Witness-parametric derivation}
+The most general existing Lean construction interface is
+\begin{center}\texttt{DerivationModel (a : Analysis) (d : Domain)}\\
+\texttt{(Witness : ForcedInput a d -> Type 1)}.\end{center}
+A forced input $i=(\nu,u_0,f)$ includes admissibility proofs. A model specifies regular and breakdown criteria and relations tying a regular witness or a net-work obstruction witness to that same input.
+
+\begin{proposition}[Regular-certificate transfer; \verified]
+Suppose every admissible input meeting the regular criterion has a representing witness; every such witness has a proved control property; and representation plus control implies $H_{d,\nu}(u_0,f)$. Then the induced certificate $F_d(f)\land\mathrm{regularCriterion}(\nu,f)$ is semantically sound.
+\end{proposition}
+\begin{proof}
+Fix a certified force and an arbitrary admissible datum. Form their forced input, choose its representing witness, apply the control theorem, and then apply the supplied analytic exit. The argument preserves the initial datum, viscosity, and force throughout.
+\end{proof}
+This is \code{derivation_regular_soundness}. Its control theorem has the exact source shape $\forall i\,w,\ \mathrm{Control}(i,w)$; representation is a separate input to the exit.
+
+\begin{proposition}[Obstruction transfer; \verified]
+Suppose an input-bound witness has an exact balance
+\[
+ M(t)=M_0+W(t),
+\]
+with $W$ unbounded above, and every qualifying global solution for the same input would imply a uniform upper bound on $M$. Under the supplied ledger-arithmetic laws, no qualifying global solution exists for that input.
+\end{proposition}
+\begin{proof}
+A global solution would bound $M$. The exact balance then bounds $W$ after subtracting the fixed initial mass, contradicting its unboundedness. The source implements this contradiction through \code{ledger_net_work_excludes_mass_bound}.
+\end{proof}
+The theorem \code{derivation_obstruction_no_global} carries this argument. The record \code{ObstructionDerivationPorts} retains both the physical representation and the assertion that \emph{every} qualifying global solution bounds that obstruction. Unboundedness of one unrelated scalar model does not suffice.
+
+Combining the two transfers gives \code{derivation_regime_soundness}; adding zero regularity gives a master core. Breakdown nonemptiness is a further premise in \code{derivation_master}. The already constructed records \code{MR3_reconstructed} and \code{MT3_reconstructed} assemble source theorem collections; they are not physical instances of every remaining derivation port.
+
+\section{Forcing extensions and their precise reach}
+\subsection{Relative GP work budgets}
+The separate forcing-classification source [4] provides an extension beyond finite external work. All quantities below belong to the same source data and time interval. Let $\nu>0$, $W(t)\ge0$, $D(t)\ge0$, and $m(t)\le W(t)$. Assume the integrated balance
+\begin{equation}\label{eq:balance}
+ \nu W(t)+\nu^2D(t)
+ \le\nu W(t_0)+Q_{\mathrm{int}}(t)+F(t),
+\end{equation}
+and nonnegative constants $Q_i,Q_f,\theta_i,\theta_f$ with
+\begin{align}
+ Q_{\mathrm{int}}(t)&\le Q_i+\theta_i\nu^2D(t),\\
+ F(t)&\le Q_f+\theta_f\nu^2D(t),\qquad
+ \theta_i+\theta_f<1.\label{eq:margin}
+\end{align}
+In the source, $F$ is also a supplied primitive of the external GP work: $F(t_0)=0$ and its ordinary derivative is the specified work rate at every point of the closed interval. The source does not replace this requirement by an almost-everywhere derivative statement. This is a trajectory-relative criterion, rather than a predicate determined only by a conventional norm of $f$.
+
+\begin{proposition}[Relative absorption; \rocq]\label{prop:gp}
+Under these hypotheses, writing $\theta=\theta_i+\theta_f$ and
+\[
+ M_* =W(t_0)+\frac{Q_i+Q_f}{\nu},
+ \qquad D_* =\frac{M_*}{\nu(1-\theta)},
+\]
+one has $m(t)\le M_*$ and $D(t)\le D_*$ throughout the supplied interval.
+\end{proposition}
+\begin{proof}
+Substitute the two budgets in \eqref{eq:balance}, move the absorbed dissipation to the left, and divide by $\nu$:
+\[
+ W(t)+\nu(1-\theta)D(t)\le M_*.
+\]
+Both left-hand terms are nonnegative and $\nu(1-\theta)>0$. Bounding each term separately gives the claims.
+\end{proof}
+The source theorem is \code{GFC21_SAFE_FORCING_GIVES_CRITICAL_BOUNDS}, with hypotheses \code{ForcedIntegratedGPLedger51} and \code{GPRegularitySafeForcing51}. Finite external budgets embed by $\theta_f=0$; literal zero force has $Q_f=\theta_f=0$. Even in that case the internal budget is required. A bound on one supplied interval is not automatically a global-in-time estimate: extending the interval or varying cutoffs requires the corresponding uniform hypotheses.
+
+\subsection{Intrinsic force size and optimal work coefficients}
+In the force-envelope source, let $\mathfrak w(f,u)$ be work, $\mathfrak d(u)\ge0$ dissipation, and $s(f)\ge0$ force size. \code{CriticalDualGeometry} assumes
+\[
+ |\mathfrak w(f,u)|^2\le s(f)\mathfrak d(u)
+\]
+and, for each $f$, a realizing state $u_f$ with
+\[
+ \mathfrak d(u_f)=s(f),\qquad \mathfrak w(f,u_f)=s(f).
+\]
+\begin{proposition}[Least uniform work coefficient; \rocq]
+For every $C\ge0$, if $|\mathfrak w(f,u)|^2\le C\mathfrak d(u)$ for all $u$, then $s(f)\le C$. Conversely, $C=s(f)$ is a valid coefficient.
+\end{proposition}
+\begin{proof}
+Use the Cauchy bound for sufficiency. Evaluating any proposed coefficient at $u_f$ gives $s(f)^2\le Cs(f)$. Divide if $s(f)>0$; if $s(f)=0$, use $C\ge0$.
+\end{proof}
+This is the content of \code{FE03_FORCE_SIZE_EXACTLY_CLASSIFIES_UNIFORM_CRITICAL_WORK}. The fractional Stokes realization identifies the intrinsic expression with a squared norm of the supplied minus-quarter map, intended as $\|A^{-1/4}Pf\|_2^2$. Its realization laws, and any classical Sobolev-space identification, remain explicit. Optimality here concerns a uniform work coefficient; it does not establish a maximal physical regularity class of forces.
+
+\subsection{Accumulation, storage, and cutoff uniformity}
+The recovered Diamond sources [3] separately provide positive linear accumulators, force absorption, critical balances, and uniform finite-cut action-cost routes. Their interfaces cannot be identified merely because the same words ``force'' or ``energy'' occur in them.
+
+For example, the proof of the \code{UAC22} full critical-readout theorem exhibits the bound
+\[
+ m_\infty(t)\le M_0^{\max}+4A_0^{\max}+B_s+B_f+B_r.
+\]
+It assumes common bounds on initial mass and action, uniform scale/force/residual payment budgets, a finite-cut action-cost realization, and the finite-cut critical balances. The full readout is supplied as a least-upper-bound relation. The proof transfers a common cutoff bound through that relation; it does not construct the physical readout or prove those uniform budgets. The exported theorem states existence of a bound, with the displayed constant supplied by its supporting \code{UAC20} proof.
+
+The record \code{StorageDomainDiamondClosure} factors the regular route through an arbitrary witness family. Its projection to \code{DomainDiamondClosure} forgets the implementation details. The more detailed \code{R3StorageTerminalWitness} specifies shell evolutions, storage paths, cofinal cuts, integrated identities, payments, absorption margins, and a full critical readout. The theorem \code{FW40_STORAGE_TERMINAL_WITNESS_GIVES_UNIFORM_CRITICAL_BOUND} derives a critical bound from this data. Existence of such witnesses for physical inputs and the critical-to-smooth exit remain premises in \code{ConcreteR3StorageDiamondClosure}.
+
+Under the relevant closure and force-embedding hypotheses, the recovered fronts derive $A$ and exclude $C$ on the whole-space side, and derive $B$ and exclude $D$ on the periodic side. Those negative conclusions about $C,D$ must not be read as constructions of their positive counterexample endpoints.
+
+\section{Source identities and verification boundary}
+\begin{center}\small
+\begin{tabular}{p{.22\linewidth}p{.35\linewidth}p{.32\linewidth}}
+\toprule
+Source family & Recovered identity & Role in this note\\
+\midrule
+Core Lean & \code{FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0} & Semantic classes, master contracts, derivation interfaces\\
+Concrete Lean & \code{FEF_NSE_ABCD_A_TIER_UNIFIED_CLOSURE_LEAN_v0_25_0} & Real-analysis interpretation and endpoint-equivalence atlas\\
+Exponent Lean & \code{NSE_FORCING_REGULARITY_CLASSES_LEAN_v0_1_4} & Scalar exponent partitions only\\
+Continuation Lean & \code{NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0} & Conditional same-trajectory continuation chain\\
+Diamond Rocq & \code{NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6} & Generic closure and storage implementation sources\\
+Forcing Rocq & \code{NSE_GP_FORCING_CLASSIFICATION_v0_1_1} & Relative forcing-budget classification\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The consolidation preserves 26 original archives and 190 distinct Rocq reference files. The active Lean project has 59 source modules. Fifty-eight retain their original bytes; one exponent-classifier proof has a statement-preserving repair whose exact edit is replayed against the archived original by the verifier. Source origin maps and archive hashes are committed in \code{provenance/}.
+
+\begin{samepage}
+At the source anchor, Actions run \code{40174041653} [5] passed on Linux and Windows with Lean 4.33.0 and Mathlib revision
+\begin{center}\small\code{db584cd6d46c92f209a44c0f1c829460d327499d}.\end{center}
+\end{samepage}
+Each platform audited 3,245 project declarations, including 1,476 theorem declarations with generated lemmas. The per-module checks cover all 649 explicit source theorem/lemma declarations. The permitted axiom dependencies are \code{propext}, \code{Classical.choice}, and \code{Quot.sound}; the project audit rejects custom axioms, unsafe declarations, and proof escapes. Sixteen infrastructure tests also passed.
+
+The tested pull-request merge commit was
+\begin{center}\small\code{2ba3f5bc4a7b74b75db1f58d0ff9552045002f44};\end{center}
+its tree equals that of the verified source commit. Original per-platform receipts are retained at evidence commit
+\begin{center}\small\code{491b3c3db7c59aee14a57a6a69f0289ee8d98507}.\end{center}
+This preprint is a subsequent documentation addition. The cited run certifies the specified source anchor, not every sentence of this manuscript, every recovered Rocq theorem, or a new physical realization. The manuscript's force-family corollary is explicitly distinguished from the existing Lean declarations. A machine-readable claim map accompanies the paper.
+
+\section{Remaining physical realization obligations}\label{sec:frontier}
+The following boundaries determine the mathematical reach of the synthesis.
+\begin{enumerate}
+\item \textbf{Boundary-time derivative.} The abstract analysis interface describes a derivative within the closed positive half-line. The concrete \code{timeDerivative} uses ambient \code{deriv}, while smoothness is expressed by \code{ContDiffOn} on a closed positive half-space. An identification theorem or corrected realization at $t=0$ is still needed before claiming the intended full PDE equivalence.
+\item \textbf{Witness existence and same-input identification.} A regular certificate must produce the required witness for every admissible datum. An obstruction must be tied to the specified datum and force and be incompatible with every qualifying global solution. Compiling the conditional transfer does not produce those inputs.
+\item \textbf{Analytic exit.} Critical estimates need the stated physical norm realization and continuation or regularity theorem. The compact \code{NSE} branch retains modal laws, cumulative payment, same-path norm identification, and a Serrin exit contract. It does not already instantiate the forced Fefferman classifier.
+\item \textbf{Force-space realization.} The exponent module proves algebraic partitions involving $s+3/2-2/q$. It does not establish actual Sobolev membership or determine solution behavior from the force exponent alone. Its \code{True}-valued frontier marker is not an analytic theorem.
+\item \textbf{Completeness of certification.} No supplied result proves that the available research certificates cover every admissible physical force. Semantic excluded middle is not an algorithm and not a finite-witness admission procedure.
+\end{enumerate}
+
+Accordingly, all four unconditional physical endpoints remain open within this project. The current contribution is a source-identified, compiled conditional architecture with explicit transfer obligations and several distinct certificate constructions. No claim of resolving the Clay problem is made.
+
+\section*{Preparation note}
+This research draft was prepared with AI assistance from the project archives, published source anchor, and recorded CI evidence. It is not peer reviewed. The repository handle identifies the source project and is not a declaration of individual authorship. No journal submission or preprint-server deposit is represented by publication of this file in the repository.
+
+\begin{thebibliography}{9}\small
+\bibitem{clay} C. L. Fefferman, \emph{Existence and Smoothness of the Navier--Stokes Equation}, official Clay Mathematics Institute problem description and appended errata. Accessed 25 October 2026.\newline
+\url{https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf}
+\bibitem{lean} \texttt{randogelist/stokes-conditional}, consolidated Lean sources, commit \code{26bc074c2b8ebf57fa0fabcf9b8263673de9d80b}. In particular, \code{Fefferman/ForceRegimes.lean}, \code{Statements.lean}, \code{MasterCore.lean}, \code{DerivationSupport.lean}, and \code{IntrinsicIdentification.lean}.\newline
+\url{https://github.com/randogelist/stokes-conditional/tree/26bc074c2b8ebf57fa0fabcf9b8263673de9d80b}
+\bibitem{diamond} Project archive \code{NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6.zip}; preserved sources under \code{reference/rocq/}, including \code{NSE_CLAY_FEFFERMAN_FRAMEWORK.v}, force-envelope, Stokes-duality, storage, and A--D front modules. Exact origins: \code{provenance/rocq_origins.json} at [2].
+\bibitem{gp} Project archive \code{NSE_GP_FORCING_CLASSIFICATION_v0_1_1.zip}; \code{reference/rocq/awpi_nse_gp_forcing_classification_v0_1_1.v} at [2]. In particular, \code{GFC03}, \code{GFC10}, \code{GFC20}, and \code{GFC21} declarations.
+\bibitem{ci} GitHub Actions, \emph{Lean build and axiom audit}, run \code{40174041653}, 25 October 2026.\newline
+\url{https://github.com/randogelist/stokes-conditional/actions/runs/40174041653}\newline
+Durable evidence: \url{https://github.com/randogelist/stokes-conditional/tree/491b3c3db7c59aee14a57a6a69f0289ee8d98507/ci-evidence}
+\end{thebibliography}
+\end{document}

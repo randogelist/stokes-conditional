@@ -1,0 +1,759 @@
+{
+  "schema": 1,
+  "preprint_version": "0.1",
+  "date": "2026-10-25",
+  "verified_source_commit": "26bc074c2b8ebf57fa0fabcf9b8263673de9d80b",
+  "verified_source_tree": "28e66960e32b1253927c982e217ffbb6bca399df",
+  "documentation_scope": "No Lean or Rocq mathematical source is changed or added. This map records source correspondence, not additional proof certification.",
+  "physical_endpoints": {
+    "A": "OPEN",
+    "B": "OPEN",
+    "C": "OPEN",
+    "D": "OPEN"
+  },
+  "ci_evidence": {
+    "run_id": 40174041653,
+    "linux": "PASS",
+    "windows": "PASS",
+    "modules": 59,
+    "declarations": 3245,
+    "theorem_declarations_including_generated": 1476,
+    "explicit_source_theorem_lemma_floor": 649,
+    "durable_evidence_commit": "491b3c3db7c59aee14a57a6a69f0289ee8d98507"
+  },
+  "claims": [
+    {
+      "id": "definition-2.1",
+      "label": "Semantic force classes",
+      "status": "LEAN_DEFINITIONS",
+      "hypotheses_or_limits": "Analysis and qualifying-solution predicate are supplied.",
+      "source": {
+        "path": "Fefferman/ForceRegimes.lean",
+        "sha256": "fa6226160e7e4cad7d34a6f675daf3bad364b12713904fcd8f9f666e02afdad5",
+        "declarations": [
+          {
+            "name": "regularForceAt",
+            "line": 9
+          },
+          {
+            "name": "breakdownForceAt",
+            "line": 14
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+            "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/ForceRegimes.lean"
+          },
+          {
+            "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+            "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/ForceRegimes.lean"
+          }
+        ]
+      }
+    },
+    {
+      "id": "proposition-2.2",
+      "label": "Semantic partition",
+      "status": "LEAN_SOURCE_RESULT",
+      "hypotheses_or_limits": "Admissible force and classical logic; no decision procedure.",
+      "source": {
+        "path": "Fefferman/ForceRegimes.lean",
+        "sha256": "fa6226160e7e4cad7d34a6f675daf3bad364b12713904fcd8f9f666e02afdad5",
+        "declarations": [
+          {
+            "name": "regularForceAt_excludes_breakdownForceAt",
+            "line": 35
+          },
+          {
+            "name": "admissibleForce_regular_or_breakdown",
+            "line": 58
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+            "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/ForceRegimes.lean"
+          },
+          {
+            "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+            "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/ForceRegimes.lean"
+          }
+        ]
+      }
+    },
+    {
+      "id": "proposition-2.4",
+      "label": "Certificate trichotomy",
+      "status": "LEAN_SOURCE_RESULT",
+      "hypotheses_or_limits": "Soundness needed for disjoint positive/negative criteria.",
+      "source": {
+        "path": "Fefferman/ForceRegimes.lean",
+        "sha256": "fa6226160e7e4cad7d34a6f675daf3bad364b12713904fcd8f9f666e02afdad5",
+        "declarations": [
+          {
+            "name": "ForceRegimes",
+            "line": 21
+          },
+          {
+            "name": "ForceRegimeSoundness",
+            "line": 25
+          },
+          {
+            "name": "unresolvedForceAt",
+            "line": 31
+          },
+          {
+            "name": "admissibleForce_certificate_trichotomy",
+            "line": 90
+          },
+          {
+            "name": "certified_regimes_disjoint",
+            "line": 83
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+            "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/ForceRegimes.lean"
+          },
+          {
+            "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+            "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/ForceRegimes.lean"
+          }
+        ]
+      }
+    },
+    {
+      "id": "corollary-3.1",
+      "label": "Force-family duality",
+      "status": "MANUSCRIPT_DEDUCTION_NOT_NEW_LEAN_DECLARATION",
+      "hypotheses_or_limits": "Classical consequence for a family contained in the admissible forces.",
+      "source": {
+        "path": "Fefferman/ForceRegimes.lean",
+        "sha256": "fa6226160e7e4cad7d34a6f675daf3bad364b12713904fcd8f9f666e02afdad5",
+        "declarations": [
+          {
+            "name": "admissibleForce_regular_or_breakdown",
+            "line": 58
+          },
+          {
+            "name": "regularForceAt_excludes_breakdownForceAt",
+            "line": 35
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+            "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/ForceRegimes.lean"
+          },
+          {
+            "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+            "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/ForceRegimes.lean"
+          }
+        ]
+      }
+    },
+    {
+      "id": "section-3-projections",
+      "label": "A-D projections",
+      "status": "SOURCE_DEFINITIONS_AND_MANUSCRIPT_PRESENTATION",
+      "hypotheses_or_limits": "Zero force admissibility for A/B membership equivalences; all positive viscosities quantified.",
+      "source": {
+        "path": "Fefferman/Statements.lean",
+        "sha256": "e026d1b26e3e4b6fccb6d338bbfb5c1f3c6c6fb75b15750616923e80c3da287f",
+        "declarations": [
+          {
+            "name": "statementAt",
+            "line": 60
+          },
+          {
+            "name": "statement",
+            "line": 68
+          },
+          {
+            "name": "A",
+            "line": 71
+          },
+          {
+            "name": "B",
+            "line": 72
+          },
+          {
+            "name": "C",
+            "line": 73
+          },
+          {
+            "name": "D",
+            "line": 74
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+            "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/Statements.lean"
+          },
+          {
+            "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+            "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/Statements.lean"
+          }
+        ]
+      }
+    },
+    {
+      "id": "section-3.1-masters",
+      "label": "Master contract",
+      "status": "LEAN_SOURCE_CONDITIONAL_RESULT",
+      "hypotheses_or_limits": "Requires soundness, zero regularity and additional breakdown witnesses for each viscosity.",
+      "source": {
+        "path": "Fefferman/MasterCore.lean",
+        "sha256": "0d06b8f3fcff37a43fdc7694935b1f450bd7b22cd79927eae45ea2b42d378dcd",
+        "declarations": [
+          {
+            "name": "DomainMasterCore",
+            "line": 8
+          },
+          {
+            "name": "DomainMaster",
+            "line": 13
+          },
+          {
+            "name": "masterCore_unforcedAt",
+            "line": 18
+          },
+          {
+            "name": "master_breakdownAt",
+            "line": 48
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+            "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/MasterCore.lean"
+          },
+          {
+            "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+            "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/MasterCore.lean"
+          }
+        ]
+      }
+    },
+    {
+      "id": "section-3.1-intrinsic",
+      "label": "Intrinsic all-regular alternative",
+      "status": "LEAN_SOURCE_CONDITIONAL_RESULT",
+      "hypotheses_or_limits": "Admissible-to-intrinsic embedding, global closure and positive viscosity inhabitant.",
+      "source": {
+        "path": "Fefferman/IntrinsicIdentification.lean",
+        "sha256": "7f4ac398f874bbd36c9e37e1a8fe4a75937731f0ce82eb35032255918b678ceb",
+        "declarations": [
+          {
+            "name": "R3FeffermanIntrinsicIdentification",
+            "line": 17
+          },
+          {
+            "name": "R3IntrinsicGlobalClosure",
+            "line": 26
+          },
+          {
+            "name": "R3IntrinsicForceRegimes",
+            "line": 104
+          },
+          {
+            "name": "R3_intrinsic_closure_identifies_Fefferman_R3_side",
+            "line": 152
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+            "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/IntrinsicIdentification.lean"
+          }
+        ]
+      }
+    },
+    {
+      "id": "proposition-4.1",
+      "label": "Regular witness transfer",
+      "status": "LEAN_SOURCE_CONDITIONAL_RESULT",
+      "hypotheses_or_limits": "Certificate includes force admissibility; witness realization, control and same-input exit required.",
+      "source": {
+        "path": "Fefferman/DerivationSupport.lean",
+        "sha256": "46faa8775ebb7b66b704f19535ab964deebd951cc5c6fa5b995697338d281507",
+        "declarations": [
+          {
+            "name": "derivationRegimes",
+            "line": 33
+          },
+          {
+            "name": "RegularDerivationPorts",
+            "line": 42
+          },
+          {
+            "name": "derivation_regular_soundness",
+            "line": 65
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+            "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/DerivationSupport.lean"
+          },
+          {
+            "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+            "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/DerivationSupport.lean"
+          }
+        ]
+      }
+    },
+    {
+      "id": "proposition-4.2",
+      "label": "Obstruction transfer",
+      "status": "LEAN_SOURCE_CONDITIONAL_RESULT",
+      "hypotheses_or_limits": "Ledger arithmetic, exact balance, unbounded work and a bound forced by every same-input global solution.",
+      "source": {
+        "path": "Fefferman/DerivationSupport.lean",
+        "sha256": "46faa8775ebb7b66b704f19535ab964deebd951cc5c6fa5b995697338d281507",
+        "declarations": [
+          {
+            "name": "NetWorkWitness",
+            "line": 17
+          },
+          {
+            "name": "ObstructionDerivationPorts",
+            "line": 52
+          },
+          {
+            "name": "derivation_obstruction_no_global",
+            "line": 85
+          },
+          {
+            "name": "derivation_regime_soundness",
+            "line": 97
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+            "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/DerivationSupport.lean"
+          },
+          {
+            "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+            "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/DerivationSupport.lean"
+          }
+        ]
+      }
+    },
+    {
+      "id": "section-4-r3",
+      "label": "Constructed R3 source collection",
+      "status": "LEAN_SOURCE_PARAMETERIZED_ASSEMBLY",
+      "hypotheses_or_limits": "Does not construct every physical derivation port.",
+      "source": {
+        "path": "Master_r3.lean",
+        "sha256": "503a5b2d8a9c94e5d5a34f0f4033163b4758caa0fd5923634ad3102f08df2d7a",
+        "declarations": [
+          {
+            "name": "MR3_reconstructed",
+            "line": 89
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+            "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Master_r3.lean"
+          },
+          {
+            "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+            "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Master_r3.lean"
+          }
+        ]
+      }
+    },
+    {
+      "id": "section-4-t3",
+      "label": "Constructed T3 source collection",
+      "status": "LEAN_SOURCE_PARAMETERIZED_ASSEMBLY",
+      "hypotheses_or_limits": "Does not construct every physical derivation port.",
+      "source": {
+        "path": "Master_T3.lean",
+        "sha256": "68a73b07b9edc21263b8060f40302caec668ef591f7fcf4696416dcc09b7c1dd",
+        "declarations": [
+          {
+            "name": "MT3_reconstructed",
+            "line": 53
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+            "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Master_T3.lean"
+          },
+          {
+            "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+            "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Master_T3.lean"
+          }
+        ]
+      }
+    },
+    {
+      "id": "proposition-5.1",
+      "label": "Relative GP absorption",
+      "status": "ROCQ_SOURCE_NOT_COMPILED_BY_LEAN_CI",
+      "hypotheses_or_limits": "Same source and interval; primitive, integrated balance, nonnegative budgets and strict subunit total margin.",
+      "source": {
+        "path": "reference/rocq/awpi_nse_gp_forcing_classification_v0_1_1.v",
+        "sha256": "498cf816231867ec1af0a1bcb7fbf1d46246e6b4ded7530586908d58f5492936",
+        "declarations": [
+          {
+            "name": "GPForcingPrimitive51",
+            "line": 28
+          },
+          {
+            "name": "GPRelativeForcingBudget51",
+            "line": 49
+          },
+          {
+            "name": "GPRegularitySafeForcing51",
+            "line": 136
+          },
+          {
+            "name": "ForcedIntegratedGPLedger51",
+            "line": 213
+          },
+          {
+            "name": "forced_closure_mass51",
+            "line": 238
+          },
+          {
+            "name": "forced_closure_diss51",
+            "line": 241
+          },
+          {
+            "name": "GFC20_TOTAL_BUDGET_ABSORBS",
+            "line": 245
+          },
+          {
+            "name": "GFC21_SAFE_FORCING_GIVES_CRITICAL_BOUNDS",
+            "line": 266
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/NSE_GP_FORCING_CLASSIFICATION_v0_1_1.zip",
+            "member": "NSE_GP_FORCING_CLASSIFICATION_v0_1_1/awpi_nse_gp_forcing_classification_v0_1_1.v",
+            "sha256": "498cf816231867ec1af0a1bcb7fbf1d46246e6b4ded7530586908d58f5492936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "proposition-5.2",
+      "label": "Least uniform work coefficient",
+      "status": "ROCQ_SOURCE_NOT_COMPILED_BY_LEAN_CI",
+      "hypotheses_or_limits": "Nonnegativity, Cauchy bound and aligned state; not maximality of physical regularity class.",
+      "source": {
+        "path": "reference/rocq/NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE.v",
+        "sha256": "a7dff180cf6880b3049f32afb36de78186754844fcc1aa2fb68f2ef21b524bd0",
+        "declarations": [
+          {
+            "name": "CriticalDualGeometry",
+            "line": 32
+          },
+          {
+            "name": "UniformWorkCoefficient",
+            "line": 49
+          },
+          {
+            "name": "FE03_FORCE_SIZE_EXACTLY_CLASSIFIES_UNIFORM_CRITICAL_WORK",
+            "line": 82
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE_v0_11_1.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE_v0_11_1/NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE.v",
+            "sha256": "a7dff180cf6880b3049f32afb36de78186754844fcc1aa2fb68f2ef21b524bd0"
+          },
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_STOKES_DUALITY_v0_12_2.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_STOKES_DUALITY_v0_12_2/NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE.v",
+            "sha256": "a7dff180cf6880b3049f32afb36de78186754844fcc1aa2fb68f2ef21b524bd0"
+          },
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS_v0_13_1.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS_v0_13_1/NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE.v",
+            "sha256": "a7dff180cf6880b3049f32afb36de78186754844fcc1aa2fb68f2ef21b524bd0"
+          },
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_FORCE_ABSORPTION_v0_14_0.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_FORCE_ABSORPTION_v0_14_0/NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE.v",
+            "sha256": "a7dff180cf6880b3049f32afb36de78186754844fcc1aa2fb68f2ef21b524bd0"
+          },
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_ACCUMULATOR_BRIDGE_v0_15_3.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_ACCUMULATOR_BRIDGE_v0_15_3/NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE.v",
+            "sha256": "a7dff180cf6880b3049f32afb36de78186754844fcc1aa2fb68f2ef21b524bd0"
+          },
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_CRITICAL_BALANCE_BRIDGE_v0_16_1.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_CRITICAL_BALANCE_BRIDGE_v0_16_1/NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE.v",
+            "sha256": "a7dff180cf6880b3049f32afb36de78186754844fcc1aa2fb68f2ef21b524bd0"
+          },
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_UNIFORM_CUTOFF_M7_v0_21_1.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_UNIFORM_CUTOFF_M7_v0_21_1/NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE.v",
+            "sha256": "a7dff180cf6880b3049f32afb36de78186754844fcc1aa2fb68f2ef21b524bd0"
+          },
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST_v0_22_0.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST_v0_22_0/NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE.v",
+            "sha256": "a7dff180cf6880b3049f32afb36de78186754844fcc1aa2fb68f2ef21b524bd0"
+          },
+          {
+            "archive": "provenance/archives/NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6.zip",
+            "member": "NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6/00_FRAMEWORK/vendor/NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE.v",
+            "sha256": "a7dff180cf6880b3049f32afb36de78186754844fcc1aa2fb68f2ef21b524bd0"
+          }
+        ]
+      }
+    },
+    {
+      "id": "section-5.2-stokes",
+      "label": "Intrinsic realization",
+      "status": "ROCQ_SOURCE_NOT_COMPILED_BY_LEAN_CI",
+      "hypotheses_or_limits": "Fractional Stokes realization is supplied; names do not realize actual fractional operators.",
+      "source": {
+        "path": "reference/rocq/NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS.v",
+        "sha256": "4169de06b90ca64e7307b0fdfc8c22d81d84f8cf39f2eed997ec639a0d5c67c9",
+        "declarations": [
+          {
+            "name": "IF02_INTRINSIC_FORCE_SIZE_IS_LEAST_UNIFORM_COEFFICIENT",
+            "line": 74
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS_v0_13_1.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS_v0_13_1/NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS.v",
+            "sha256": "4169de06b90ca64e7307b0fdfc8c22d81d84f8cf39f2eed997ec639a0d5c67c9"
+          },
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_FORCE_ABSORPTION_v0_14_0.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_FORCE_ABSORPTION_v0_14_0/NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS.v",
+            "sha256": "4169de06b90ca64e7307b0fdfc8c22d81d84f8cf39f2eed997ec639a0d5c67c9"
+          },
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_ACCUMULATOR_BRIDGE_v0_15_3.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_ACCUMULATOR_BRIDGE_v0_15_3/NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS.v",
+            "sha256": "4169de06b90ca64e7307b0fdfc8c22d81d84f8cf39f2eed997ec639a0d5c67c9"
+          },
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_CRITICAL_BALANCE_BRIDGE_v0_16_1.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_CRITICAL_BALANCE_BRIDGE_v0_16_1/NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS.v",
+            "sha256": "4169de06b90ca64e7307b0fdfc8c22d81d84f8cf39f2eed997ec639a0d5c67c9"
+          },
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_UNIFORM_CUTOFF_M7_v0_21_1.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_UNIFORM_CUTOFF_M7_v0_21_1/NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS.v",
+            "sha256": "4169de06b90ca64e7307b0fdfc8c22d81d84f8cf39f2eed997ec639a0d5c67c9"
+          },
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST_v0_22_0.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST_v0_22_0/NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS.v",
+            "sha256": "4169de06b90ca64e7307b0fdfc8c22d81d84f8cf39f2eed997ec639a0d5c67c9"
+          },
+          {
+            "archive": "provenance/archives/NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6.zip",
+            "member": "NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6/00_FRAMEWORK/vendor/NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS.v",
+            "sha256": "4169de06b90ca64e7307b0fdfc8c22d81d84f8cf39f2eed997ec639a0d5c67c9"
+          }
+        ]
+      }
+    },
+    {
+      "id": "section-5.3-uac",
+      "label": "Uniform action-cost bound",
+      "status": "ROCQ_SOURCE_NOT_COMPILED_BY_LEAN_CI",
+      "hypotheses_or_limits": "Common route budgets and initial bounds, finite-cut balance, action-cost realization, assumed LUB readout; displayed constant from supporting UAC20 proof.",
+      "source": {
+        "path": "reference/rocq/NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST.v",
+        "sha256": "bb29a0a43b53aaa305e94e524b82fe67d288549dce4cc4d8cb58532ecdc31e69",
+        "declarations": [
+          {
+            "name": "FiniteCutActionCostRouteRealization",
+            "line": 162
+          },
+          {
+            "name": "UniformFiniteCutCriticalBalance",
+            "line": 168
+          },
+          {
+            "name": "UAC22_ACTION_COST_COUPLING_CONTROLS_FULL_CRITICAL_READOUT",
+            "line": 230
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST_v0_22_0.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST_v0_22_0/NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST.v",
+            "sha256": "bb29a0a43b53aaa305e94e524b82fe67d288549dce4cc4d8cb58532ecdc31e69"
+          },
+          {
+            "archive": "provenance/archives/NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6.zip",
+            "member": "NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6/00_FRAMEWORK/vendor/NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST.v",
+            "sha256": "bb29a0a43b53aaa305e94e524b82fe67d288549dce4cc4d8cb58532ecdc31e69"
+          }
+        ]
+      }
+    },
+    {
+      "id": "section-5.3-lub",
+      "label": "Full critical readout",
+      "status": "ROCQ_SOURCE_NOT_COMPILED_BY_LEAN_CI",
+      "hypotheses_or_limits": "Assumed least-upper-bound relation; physical limit is not constructed.",
+      "source": {
+        "path": "reference/rocq/NSE_R3_FORCED_GP_DIAMOND_FINITE_CUT_IDENTITY.v",
+        "sha256": "da3dc7ad2618cd9cb72f9dcd3f993f177ca8e08412da087a9c6a3ca6994692f5",
+        "declarations": [
+          {
+            "name": "FullCriticalLimitReadout",
+            "line": 123
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_UNIFORM_CUTOFF_M7_v0_21_1.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_UNIFORM_CUTOFF_M7_v0_21_1/NSE_R3_FORCED_GP_DIAMOND_FINITE_CUT_IDENTITY.v",
+            "sha256": "da3dc7ad2618cd9cb72f9dcd3f993f177ca8e08412da087a9c6a3ca6994692f5"
+          },
+          {
+            "archive": "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST_v0_22_0.zip",
+            "member": "NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST_v0_22_0/NSE_R3_FORCED_GP_DIAMOND_FINITE_CUT_IDENTITY.v",
+            "sha256": "da3dc7ad2618cd9cb72f9dcd3f993f177ca8e08412da087a9c6a3ca6994692f5"
+          },
+          {
+            "archive": "provenance/archives/NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6.zip",
+            "member": "NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6/00_FRAMEWORK/vendor/NSE_R3_FORCED_GP_DIAMOND_FINITE_CUT_IDENTITY.v",
+            "sha256": "da3dc7ad2618cd9cb72f9dcd3f993f177ca8e08412da087a9c6a3ca6994692f5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "section-5.3-storage",
+      "label": "Storage and domain closure",
+      "status": "ROCQ_SOURCE_CONDITIONAL_NOT_COMPILED_BY_LEAN_CI",
+      "hypotheses_or_limits": "Physical witness existence, full readout and smooth exit are supplied.",
+      "source": {
+        "path": "reference/rocq/NSE_CLAY_FEFFERMAN_FRAMEWORK.v",
+        "sha256": "dbd0f6b5ecf4a05b23d329a619769b8514206f1bd19fbdddb958760985e507b0",
+        "declarations": [
+          {
+            "name": "DomainDiamondClosure",
+            "line": 101
+          },
+          {
+            "name": "StorageDomainDiamondClosure",
+            "line": 188
+          },
+          {
+            "name": "R3StorageTerminalWitness",
+            "line": 274
+          },
+          {
+            "name": "ConcreteR3StorageDiamondClosure",
+            "line": 354
+          },
+          {
+            "name": "FW40_STORAGE_TERMINAL_WITNESS_GIVES_UNIFORM_CRITICAL_BOUND",
+            "line": 323
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6.zip",
+            "member": "NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6/00_FRAMEWORK/NSE_CLAY_FEFFERMAN_FRAMEWORK.v",
+            "sha256": "dbd0f6b5ecf4a05b23d329a619769b8514206f1bd19fbdddb958760985e507b0"
+          }
+        ]
+      }
+    },
+    {
+      "id": "section-5.3-not-c",
+      "label": "Conditional exclusion of C",
+      "status": "ROCQ_SOURCE_CONDITIONAL_NOT_COMPILED_BY_LEAN_CI",
+      "hypotheses_or_limits": "Closure plus embedding of every admissible force; conclusion is not C.",
+      "source": {
+        "path": "reference/rocq/NSE_CLAY_FEFFERMAN_C_R3_FORCED_BREAKDOWN.v",
+        "sha256": "32483956e1284b1418bf0811573ba4b9c47fccbd810e8a09b14d868f7af9c054",
+        "declarations": [
+          {
+            "name": "C20_R3_CONCRETE_STORAGE_DIAMOND_PLUS_CLAY_FORCE_EMBEDDING_EXCLUDES_FEFFERMAN_C",
+            "line": 52
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6.zip",
+            "member": "NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6/03_C_R3_FORCED_BREAKDOWN/NSE_CLAY_FEFFERMAN_C_R3_FORCED_BREAKDOWN.v",
+            "sha256": "32483956e1284b1418bf0811573ba4b9c47fccbd810e8a09b14d868f7af9c054"
+          }
+        ]
+      }
+    },
+    {
+      "id": "section-5.3-not-d",
+      "label": "Conditional exclusion of D",
+      "status": "ROCQ_SOURCE_CONDITIONAL_NOT_COMPILED_BY_LEAN_CI",
+      "hypotheses_or_limits": "Closure plus embedding of every admissible force; conclusion is not D.",
+      "source": {
+        "path": "reference/rocq/NSE_CLAY_FEFFERMAN_D_T3_FORCED_BREAKDOWN.v",
+        "sha256": "bb6703f012057911203ce03ec98bb292ab12e706d942939636102115677e0d28",
+        "declarations": [
+          {
+            "name": "D20_T3_DOMAIN_DIAMOND_PLUS_CLAY_FORCE_EMBEDDING_EXCLUDES_FEFFERMAN_D",
+            "line": 54
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6.zip",
+            "member": "NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6/04_D_T3_FORCED_BREAKDOWN/NSE_CLAY_FEFFERMAN_D_T3_FORCED_BREAKDOWN.v",
+            "sha256": "bb6703f012057911203ce03ec98bb292ab12e706d942939636102115677e0d28"
+          }
+        ]
+      }
+    },
+    {
+      "id": "section-7-exponents",
+      "label": "Scalar exponent boundary",
+      "status": "LEAN_SOURCE_RESULT_ANALYTIC_REALIZATION_OPEN",
+      "hypotheses_or_limits": "Scalar classification only; actual Sobolev membership and PDE solution regularity not proved.",
+      "source": {
+        "path": "NSEForcingRegularityClasses.lean",
+        "sha256": "7d5e471d1085b326e140854d6ad78df067e7a7e291346a8c3ffade03b948af35",
+        "declarations": [
+          {
+            "name": "forcingScalingExponent",
+            "line": 14
+          },
+          {
+            "name": "L2_LH_TRICHOTOMY_SMOOTH_CRITICAL_ROUGH",
+            "line": 106
+          },
+          {
+            "name": "ActualSobolevSpaceRealizationFrontier",
+            "line": 178
+          }
+        ],
+        "origin_records": [
+          {
+            "archive": "provenance/archives/NSE_FORCING_REGULARITY_CLASSES_LEAN_v0_1_4.zip",
+            "member": "NSE_FORCING_REGULARITY_CLASSES_LEAN_v0_1_4/NSEForcingRegularityClasses.lean"
+          }
+        ]
+      }
+    }
+  ]
+}
