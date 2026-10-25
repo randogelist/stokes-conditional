@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "anchor": "NSE_FEFFERMAN_ABCD_RECOVERED_v0_1_0",
+  "repository": "randogelist/stokes-conditional",
+  "verified_source_commit": "26bc074c2b8ebf57fa0fabcf9b8263673de9d80b",
+  "verified_source_tree": "28e66960e32b1253927c982e217ffbb6bca399df",
+  "github_pull_request_merge_commit": "2ba3f5bc4a7b74b75db1f58d0ff9552045002f44",
+  "merge_tree_equals_source_tree": true,
+  "workflow_run": 40174041653,
+  "workflow_url": "https://github.com/randogelist/stokes-conditional/actions/runs/40174041653",
+  "status": "success",
+  "scope": "Compiled and axiom-audited conditional architecture; no unconditional physical endpoint claimed",
+  "physical_endpoints": {
+    "A": "OPEN",
+    "B": "OPEN",
+    "C": "OPEN",
+    "D": "OPEN"
+  },
+  "counts": {
+    "modules": 59,
+    "declarations": 3245,
+    "theorems_including_generated": 1476,
+    "explicit_source_theorems_and_lemmas": 649
+  },
+  "jobs": {
+    "linux": {
+      "id": 121110911781,
+      "status": "success",
+      "artifact_id": 12591766743,
+      "artifact_sha256": "206c5c2268cbaa179723bf3dc97ef89c90d4d0ee0484353dea0ea18f8a5f9a38",
+      "receipt_sha256": "06a4cea6a7badb90c2fde6d3979017b49ffd27c5e8376a57c1f8a35dcb47a5c3"
+    },
+    "windows": {
+      "id": 121110911627,
+      "status": "success",
+      "artifact_id": 12591592692,
+      "artifact_sha256": "e1e62dc7af622cd1fe705480afdd08ac7ffd3a7fd896f5ff222a4ca37e150975",
+      "receipt_sha256": "f1c538cc2c7411e291a1edaffd6de43be4bd365009e86c201d216039e477775d"
+    }
+  },
+  "verification": "Downloaded artifact SHA-256 digests matched GitHub metadata. All 59 source hashes, six settings hashes, 30 provenance hashes, and both log hashes in each receipt were independently matched against the published source and downloaded logs.",
+  "retained_files": "Original CI receipt bytes are preserved here. Full build and audit logs remain in the GitHub Actions artifacts, subject to retention.",
+  "evidence_branch_role": "Evidence-only descendant of the verified source commit. This additional evidence commit is not itself represented as the source commit tested by the run."
+}

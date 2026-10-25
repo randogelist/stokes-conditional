@@ -1,0 +1,396 @@
+{
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "anchor": "NSE_FEFFERMAN_ABCD_RECOVERED_v0_1_0",
+  "compiled_artifact_sha256": {
+    ".lake/build/lib/lean/Audit.olean": "d8b9080d9eac8bd4b882b4da208e8084940385678556936165a0e3cbc30cf0ba",
+    ".lake/build/lib/lean/ConcreteABCDUnifiedClosure.olean": "b7539895ae7053be0998958bf92437e9c56222e8715b93df25581c83ad367a82",
+    ".lake/build/lib/lean/Fefferman/Analysis.olean": "ff63d9d8e7c7934af5b8f50822b43590b82260730732bf63d8fa35b127490d28",
+    ".lake/build/lib/lean/Fefferman/CanonicalSource.olean": "7ed08403eb82cf38127128b9cc5fefa1bf12ce6914a64f302e04aae2ce88a662",
+    ".lake/build/lib/lean/Fefferman/Continuation.olean": "13457789bcff6cf20e8f4d70a4cf0e45e4b767419e70397c916c1502ecda78ba",
+    ".lake/build/lib/lean/Fefferman/DerivationSupport.olean": "647fc1f91645739f20f11928b7a3ad9fdb6dfa3449d20fc2df18ff1e05769970",
+    ".lake/build/lib/lean/Fefferman/FiniteSpectral.olean": "137d3d53fc9d239c58a1fdede53df76c47f8ff3b57aa50367d1b6bf939ce656a",
+    ".lake/build/lib/lean/Fefferman/ForceRegimes.olean": "8ce62d9e5e28f77860aaadf5dc4b88dba3861bd007204ceaa7f2c8bb76c2ace5",
+    ".lake/build/lib/lean/Fefferman/IntrinsicIdentification.olean": "65f0ddb0b227d955e1eed4218fb6be02739cbb7d633d13c4d5d13d762c7cf728",
+    ".lake/build/lib/lean/Fefferman/KernelAlgebra.olean": "65e84a8aabe7b02939be1006281b3e4a8a8c13b0fc03da6d81cfd486030d0067",
+    ".lake/build/lib/lean/Fefferman/KernelBirth.olean": "8412555a3d307ad80596e939e42fdaffa3fc7bca3cb4f901eb0b14fefb975459",
+    ".lake/build/lib/lean/Fefferman/KernelCalculus.olean": "e3b1ce63086afe48674f88fb755b9abe77a6d472c8767fce271f8934da72cd00",
+    ".lake/build/lib/lean/Fefferman/KernelCapacity.olean": "e42a81225b9f96cf352968026cf3d0c5fded44037adfe6f863ada478322948ae",
+    ".lake/build/lib/lean/Fefferman/KernelCovariance.olean": "22cf353d96f3540fcb809205d6f118308bcd02440387a547088d0ead272cb1b6",
+    ".lake/build/lib/lean/Fefferman/KernelCritical.olean": "516793773a79a5a01347aa12c834a43667a8f1e9a8fb4351e056bae7d5d825df",
+    ".lake/build/lib/lean/Fefferman/KernelGeometry.olean": "d073942f124279795e91780220f69afa14a602b938182a6f71beaac3812fbdc7",
+    ".lake/build/lib/lean/Fefferman/KernelPackets.olean": "114072f2362e72ef2b6407b54af35992240ff5803c07c4477e25aff36f55a6d7",
+    ".lake/build/lib/lean/Fefferman/KernelRenewal.olean": "74fbf30150caa90fd3c8417a47aa1898492e6a065f4bae39f4ebbb8fcfe22585",
+    ".lake/build/lib/lean/Fefferman/KernelStorage.olean": "e5ba4fb4514d8151af3b9b58a1c153b3663faf82de443d1e0451a4d00782b57b",
+    ".lake/build/lib/lean/Fefferman/Logic.olean": "401ae5d8d20ceec4bd0a6480c89d4ae31a2de308455260610a58947002c643fe",
+    ".lake/build/lib/lean/Fefferman/MasterAC.olean": "c316ba1ee5201ba76a2a6a672699ec81ef24be6f1066053f3e0ba1388b047220",
+    ".lake/build/lib/lean/Fefferman/MasterCore.olean": "f633ce2d065b700a4a15a003db57ebf319534e4d84444e4d4cf2cba8d8b90b0b",
+    ".lake/build/lib/lean/Fefferman/MovingFrame.olean": "6d30c44d938e2a82ef64bb3b881e04599cb3bb6cbf0bdc2d672aff2dfb9d041c",
+    ".lake/build/lib/lean/Fefferman/Obstructions.olean": "183559489d5161f6ad31c6ac8d2a405520e454d1cea76ba17765cf3ab638688f",
+    ".lake/build/lib/lean/Fefferman/PhysicsClassical.olean": "74456a76cb21deada90b0c4801ad0527308164ff66d178dbcdf182cd933f0a0f",
+    ".lake/build/lib/lean/Fefferman/PhysicsGravity.olean": "c523bed12d8c50419e3b76ed6da0a0b5f4093b73e0b84c6fc4f9c8694dce88ca",
+    ".lake/build/lib/lean/Fefferman/PhysicsQuantum.olean": "b3fa8611aa2957a6e6db5218e10becf2469c7917ac810bc963180a4e2823e2cb",
+    ".lake/build/lib/lean/Fefferman/PhysicsUnification.olean": "8d235b6c5246963e9cccec2ff8e1b168740437da906a51953f62567004458ec5",
+    ".lake/build/lib/lean/Fefferman/PhysicsVariationalTransport.olean": "311bf5887c36dc4b8fc4f1a3a707404e22e81fde030d97920d6167293f7b03aa",
+    ".lake/build/lib/lean/Fefferman/ProjectRoutes.olean": "3cfc6f2d5658d4462bd9d14d21daca5903303624a46b7835054200a11f48434f",
+    ".lake/build/lib/lean/Fefferman/R3SourceBranch.olean": "711356fd88b8cea8bd0590163979703e7b129ed507491c7af6ac1e0b2a94bfbf",
+    ".lake/build/lib/lean/Fefferman/ReconstructedRoutes.olean": "cb5312bf46245928ae739a2002bc89227456bb88db190ae59376579f33ebc890",
+    ".lake/build/lib/lean/Fefferman/ReducedCapacity.olean": "564cd27fa6a7d8bad01e5b5a502c656800ec2b9c4d6600fce15cc803027b539a",
+    ".lake/build/lib/lean/Fefferman/ScalarLedger.olean": "5108994686d062783463bd486783aed9df3c4b138f03404e016f46de28be89a4",
+    ".lake/build/lib/lean/Fefferman/SourceGeometry.olean": "31f7451d8321434395ce5168d88f897ea2399f3e2043e5007a8451e8bae23ab1",
+    ".lake/build/lib/lean/Fefferman/Statements.olean": "4ede32f77e4413f8f861de867d688ae85a76a738321c7b7070a83883d8ad611a",
+    ".lake/build/lib/lean/Fefferman/T3IntegralBranch.olean": "96daaa1e315908af68b2be748af923fa0a0c8b74030fd4437ae09aeab6640f7e",
+    ".lake/build/lib/lean/Feffermann-Classification.olean": "7999b4340daf6cd38896f87b7683e37ffdebb2e3e4be58d88f250fa8a12228dd",
+    ".lake/build/lib/lean/LayerA_Mathematics.olean": "39fd52ee90ca9123e6db5482073f24d9e49a97d81c750ee7848387af66dc242e",
+    ".lake/build/lib/lean/LayerB_Physics.olean": "d994b492e08e954e8709a0e6f5142c27348e73d65f1a8cfb708c6f1291eab256",
+    ".lake/build/lib/lean/Master_R3_derivation.olean": "f96351166b8297fb1d6558998efacede87846e4021fb8927d868ecba9f798458",
+    ".lake/build/lib/lean/Master_R3_details.olean": "304abb6c749592447c454b451b88fd330244c498c3b26025f7c481dcd3131c1b",
+    ".lake/build/lib/lean/Master_T3.olean": "2ac8d2cd8d65337e34d1c9636864d17266aedc6e5b8c884549a2fbb4ea3cd1c0",
+    ".lake/build/lib/lean/Master_T3_derivation.olean": "e6f064a76b63ef0118c2b604bf9d9c07d931d43e848fef12ebd6ee7ef639c270",
+    ".lake/build/lib/lean/Master_T3_details.olean": "67d151e034db29def3f0f6454303751ecc200e15b17078bc4771a44b91b0c900",
+    ".lake/build/lib/lean/Master_r3.olean": "54e37b5c5f8dcafafc32fcebc07ec68806ca050e10a3fb37fdd6b991333c25f0",
+    ".lake/build/lib/lean/NSE/Audit.olean": "6bdd716a2adbc9e86115e7e50976e30f8a7754ea016d963fe3f016861a7c5912",
+    ".lake/build/lib/lean/NSE/Completion.olean": "1d5a9b59b18f360b4f7b5b736af559d617cec589e40f4e7bf738f70cd47f0b4f",
+    ".lake/build/lib/lean/NSE/Continuation.olean": "ffb38671011e22c516dc56bbeff9a9b9f975648886e9f5a3b2267cd4cdabc69e",
+    ".lake/build/lib/lean/NSE/CriticalBalance.olean": "a1356269dbdc1115c063eb9c03387bea7328408ee670906eb186888d147f2a13",
+    ".lake/build/lib/lean/NSE/HilbertEntrance.olean": "b53d279de23d6e3cfa012f9135a9ea23c181d9d3aaebf4f74b57938209cf4903",
+    ".lake/build/lib/lean/NSE/Injection.olean": "730edf8be594f982f72450462558c5e5884c6e993ea05e36132d638fe7fec2b3",
+    ".lake/build/lib/lean/NSE/LHLedger.olean": "ce0535ff26d43beba02ffdc2401898f32af524e1920bb5d6c6900c5c6b487628",
+    ".lake/build/lib/lean/NSE/NSEAnchor.olean": "259e3256b377df75e6a83e1f0fd5fcf8268c7bb66d249635e365b9a8cf4130c8",
+    ".lake/build/lib/lean/NSE/PrefixPayment.olean": "70936a57abbdd5abdc3ff81366e3a435fed136c69446975493dd82f65e27d5ff",
+    ".lake/build/lib/lean/NSE/Representation.olean": "07339e786b4f85c0be3e427f31518786fd1be2f034a55665a452982a54eaaa57",
+    ".lake/build/lib/lean/NSE/Serrin.olean": "1cb7e31e11f3b1e558348310032ed65f8da9ddc5f81b445944ba60de1510d056",
+    ".lake/build/lib/lean/NSEForcingRegularityClasses.olean": "70393f0037346bb13ac0fa4ca6ab5ef4659c8b80f5111e1853268e913463ddc5",
+    ".lake/build/lib/lean/Types.olean": "2b5297f8175f2e96ff3ea7d9cd6b55bc93c8ee2cff42436cdc7cb80c91273ae4"
+  },
+  "counts": {
+    "declarations": 3245,
+    "modules": 59,
+    "theorems": 1476
+  },
+  "created_at": "2026-10-25T07:53:41.931167+00:00",
+  "dependency_graph": {
+    "Audit": [
+      "Feffermann-Classification",
+      "Fefferman.MovingFrame",
+      "LayerB_Physics"
+    ],
+    "ConcreteABCDUnifiedClosure": [
+      "Fefferman.Analysis",
+      "Fefferman.Statements"
+    ],
+    "Fefferman.Analysis": [],
+    "Fefferman.CanonicalSource": [
+      "Fefferman.KernelCalculus"
+    ],
+    "Fefferman.Continuation": [
+      "Fefferman.Statements"
+    ],
+    "Fefferman.DerivationSupport": [
+      "Fefferman.MasterCore",
+      "Fefferman.ScalarLedger"
+    ],
+    "Fefferman.FiniteSpectral": [
+      "Fefferman.ReducedCapacity",
+      "Fefferman.R3SourceBranch"
+    ],
+    "Fefferman.ForceRegimes": [
+      "Fefferman.Statements"
+    ],
+    "Fefferman.IntrinsicIdentification": [
+      "Master_r3"
+    ],
+    "Fefferman.KernelAlgebra": [
+      "Fefferman.FiniteSpectral"
+    ],
+    "Fefferman.KernelBirth": [
+      "Fefferman.KernelGeometry"
+    ],
+    "Fefferman.KernelCalculus": [
+      "Fefferman.KernelCritical"
+    ],
+    "Fefferman.KernelCapacity": [
+      "Fefferman.KernelRenewal"
+    ],
+    "Fefferman.KernelCovariance": [
+      "Fefferman.KernelCapacity",
+      "Fefferman.ProjectRoutes"
+    ],
+    "Fefferman.KernelCritical": [
+      "Fefferman.KernelRenewal"
+    ],
+    "Fefferman.KernelGeometry": [
+      "Fefferman.KernelCapacity"
+    ],
+    "Fefferman.KernelPackets": [
+      "Fefferman.KernelCapacity",
+      "Fefferman.KernelCalculus"
+    ],
+    "Fefferman.KernelRenewal": [
+      "Fefferman.KernelAlgebra"
+    ],
+    "Fefferman.KernelStorage": [
+      "Fefferman.KernelCalculus",
+      "Fefferman.KernelCapacity"
+    ],
+    "Fefferman.Logic": [
+      "Fefferman.Statements"
+    ],
+    "Fefferman.MasterAC": [
+      "Master_R3_derivation"
+    ],
+    "Fefferman.MasterCore": [
+      "Fefferman.ForceRegimes"
+    ],
+    "Fefferman.MovingFrame": [
+      "Fefferman.FiniteSpectral"
+    ],
+    "Fefferman.Obstructions": [
+      "Fefferman.Statements"
+    ],
+    "Fefferman.PhysicsClassical": [
+      "Fefferman.PhysicsVariationalTransport"
+    ],
+    "Fefferman.PhysicsGravity": [
+      "Fefferman.PhysicsQuantum"
+    ],
+    "Fefferman.PhysicsQuantum": [
+      "Fefferman.PhysicsClassical"
+    ],
+    "Fefferman.PhysicsUnification": [
+      "Fefferman.PhysicsGravity",
+      "Fefferman.MasterAC"
+    ],
+    "Fefferman.PhysicsVariationalTransport": [
+      "Fefferman.MovingFrame"
+    ],
+    "Fefferman.ProjectRoutes": [
+      "Fefferman.Continuation"
+    ],
+    "Fefferman.R3SourceBranch": [
+      "Fefferman.SourceGeometry"
+    ],
+    "Fefferman.ReconstructedRoutes": [
+      "Fefferman.KernelBirth",
+      "Fefferman.KernelStorage",
+      "Fefferman.KernelPackets",
+      "Fefferman.CanonicalSource",
+      "Fefferman.ProjectRoutes"
+    ],
+    "Fefferman.ReducedCapacity": [
+      "Fefferman.SourceGeometry"
+    ],
+    "Fefferman.ScalarLedger": [
+      "Fefferman.Analysis"
+    ],
+    "Fefferman.SourceGeometry": [
+      "Fefferman.ScalarLedger"
+    ],
+    "Fefferman.Statements": [
+      "Fefferman.Analysis"
+    ],
+    "Fefferman.T3IntegralBranch": [
+      "Master_T3_derivation"
+    ],
+    "Feffermann-Classification": [
+      "Master_r3",
+      "Fefferman.MasterAC",
+      "Master_T3",
+      "Fefferman.Logic",
+      "Fefferman.ProjectRoutes",
+      "Fefferman.Obstructions",
+      "Fefferman.IntrinsicIdentification"
+    ],
+    "LayerA_Mathematics": [
+      "Feffermann-Classification",
+      "Fefferman.MovingFrame"
+    ],
+    "LayerB_Physics": [
+      "LayerA_Mathematics",
+      "Fefferman.PhysicsUnification"
+    ],
+    "Master_R3_derivation": [
+      "Master_R3_details",
+      "Fefferman.ReconstructedRoutes",
+      "Fefferman.KernelCovariance"
+    ],
+    "Master_R3_details": [
+      "Fefferman.DerivationSupport"
+    ],
+    "Master_T3": [
+      "Master_T3_derivation",
+      "Fefferman.T3IntegralBranch",
+      "Fefferman.ProjectRoutes"
+    ],
+    "Master_T3_derivation": [
+      "Master_T3_details",
+      "Fefferman.KernelCovariance"
+    ],
+    "Master_T3_details": [
+      "Fefferman.DerivationSupport"
+    ],
+    "Master_r3": [
+      "Master_R3_derivation",
+      "Fefferman.R3SourceBranch",
+      "Fefferman.FiniteSpectral",
+      "Fefferman.ProjectRoutes"
+    ],
+    "NSE.Audit": [
+      "NSE.NSEAnchor",
+      "NSE.HilbertEntrance"
+    ],
+    "NSE.Completion": [],
+    "NSE.Continuation": [
+      "NSE.Representation",
+      "NSE.Injection",
+      "NSE.Serrin"
+    ],
+    "NSE.CriticalBalance": [],
+    "NSE.HilbertEntrance": [
+      "NSE.Representation"
+    ],
+    "NSE.Injection": [
+      "NSE.PrefixPayment",
+      "NSE.CriticalBalance",
+      "NSE.Completion"
+    ],
+    "NSE.LHLedger": [
+      "NSE.Representation",
+      "NSE.PrefixPayment"
+    ],
+    "NSE.NSEAnchor": [
+      "NSE.Continuation",
+      "NSE.LHLedger"
+    ],
+    "NSE.PrefixPayment": [],
+    "NSE.Representation": [],
+    "NSE.Serrin": [],
+    "NSEForcingRegularityClasses": [],
+    "Types": [
+      "Feffermann-Classification"
+    ]
+  },
+  "integrity_fingerprint": "e13016b731e45240f32685306530e34958669110adaac28de6ea9154d70f5a9e",
+  "lean_version": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "logs_sha256": {
+    "axioms.log": "daad09a75e313bba0ceb05ba0d1b4e3213fa8d784e0ce68dd4c26e51d8553e74",
+    "build.log": "7bf7f56ac83c165897dd5afd73ccc3dce54596a4e0a20a51bb1389e08225486c"
+  },
+  "mathlib_revision": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "physical_endpoints": {
+    "A": "OPEN",
+    "B": "OPEN",
+    "C": "OPEN",
+    "D": "OPEN"
+  },
+  "platform": {
+    "machine": "x86_64",
+    "system": "Linux"
+  },
+  "provenance_sha256": {
+    "provenance/active_source_origins.json": "b1cc0413963555fd3798f9d3cea3a31792d7d9d9bd27cafc168747f27583e617",
+    "provenance/archives/FEF_NSE_ABCD_A_TIER_UNIFIED_CLOSURE_LEAN_v0_25_0.zip": "463dec3a7e1638c5e078dcfe732a9648a8ed129ce3dc7ec54b9aaa949b42e19c",
+    "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip": "2f668a7d00358766d9f9c9d0d49a65ef8512c3043830deec38ef1017165b15cf",
+    "provenance/archives/FEF_NSE_CONCRETE_PERIODIZATION_TRANSLATION_CLOSED_LEAN_v0_20_26_PASSFIX.zip": "647f6188bb40ed44a3d474620dd2f93175b3a8d89af151f79144df8ae4a1c367",
+    "provenance/archives/FEF_NSE_CONCRETE_SOURCE_RESCALING_LEAN_v0_20_27.zip": "e0c9107ab60337aef458cf34921d367a4310cfb18e5185c506a23e84ec94cc28",
+    "provenance/archives/FEF_NSE_COROLLARY106_DELAYED_RESCALING_LEAN_v0_20_29_PASSFIX.zip": "b9cc9c2745f21b33f97d2dbf28acb1324b0c072d0f0183a39e26fc0d96586a78",
+    "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip": "bddd0a0b0a6a38b343002bf141e902bfb1cf8664770e910882778f4037bdefb8",
+    "provenance/archives/FEF_NSE_PERIODIC_B_A_TIER_CLOSURE_LEAN_v0_21_1_FIX1.zip": "38e71895b11ea8ab0168ff9ac0e6f4b12b55e96c0c634963a943de443d471803",
+    "provenance/archives/FEF_NSE_PERIODIC_D_A_TIER_CLOSURE_LEAN_v0_22_2_FIX2.zip": "c708fdb5e840d7c73e788b6300d8c3e6db80bd060162f06a41bb9a8011f08011",
+    "provenance/archives/FEF_NSE_WHOLESPACE_A_A_TIER_CLOSURE_LEAN_v0_24_0.zip": "b078a60028a77d39dddbeecceebd65e7da774883aa6924e635a4e0c9562d6681",
+    "provenance/archives/FEF_NSE_WHOLESPACE_C_A_TIER_CLOSURE_LEAN_v0_23_0.zip": "0d65fb3a889891a19360d3ba9491034962cdb8e2281d9b25840c1b6663e61afd",
+    "provenance/archives/NSE_CLAY_FEFFERMAN_ABCD_DIAMOND_v0_27_6.zip": "0dbf1a350e123a595d9921ebade4cb9c4b2713bcf6e0bc0c4d8163ab2742d100",
+    "provenance/archives/NSE_FORCING_REGULARITY_CLASSES_LEAN_v0_1_4.zip": "e9d4c32fb41833ef02b4835131b5825888bd919e099ee6b8dfc85e333bf0bba7",
+    "provenance/archives/NSE_GP_FORCING_CLASSIFICATION_v0_1_0.zip": "e87ceb49cfb224160e12571a5e6c63f7c56e75c503a96c049db6efeeb4fc0ca6",
+    "provenance/archives/NSE_GP_FORCING_CLASSIFICATION_v0_1_1.zip": "2e768ab03e9c1b258050db4c5ae04cbf4ab606177eb6701121c14ba4c1f0834c",
+    "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0.zip": "5276e905f15575363f65c6560dfc69ada07b9aed07b0b1e1902f51fe0807cd70",
+    "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_v0_1_0.zip": "5fba06fc3d2c55ca0518d050280b5723fa9137ef2930063a8e235845d4700fbb",
+    "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_ACCUMULATOR_BRIDGE_v0_15_3.zip": "35ece09f30885418a961ce147182e9cfe8f9c4171f09d822149c2620727bdab3",
+    "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_CRITICAL_BALANCE_BRIDGE_v0_16_1.zip": "8c05339028293ebd927b6d8305efafc97e87d43b87ffce21046e5bbc0678f9a2",
+    "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_CRITICAL_CLASSES_v0_9_0.zip": "3c4da55592a4d12caf913c07b6ebef24875e14627e9f44387b9b9e95671d2acc",
+    "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_FORCE_ABSORPTION_v0_14_0.zip": "b43e11d413290903ead6c2129a048c0fcbf8db2c9bd8eb7ff8bce7093c6856b2",
+    "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_FORCE_ENVELOPE_v0_11_1.zip": "b5b757973004575bee83b4c537eca28bb27c8c96843a6d65cd93117325432228",
+    "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_INTRINSIC_FORCE_CLASS_v0_13_1.zip": "5230f5417a1a597a996db195312fb6e86275a7d35f8ba1b8200c24b35d5b1c8e",
+    "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_SEPARATRIX_v0_10_0.zip": "5c699d8dcca43dbcd124ed4a427ffaa1b789e073429084b98b2fb85b187a0c75",
+    "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_STOKES_DUALITY_v0_12_2.zip": "f71895d2f22cc3e1d39fe2882268d6262546374bfd22ae9218135b3910aa7d23",
+    "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_UNIFORM_ACTION_COST_v0_22_0.zip": "7afefb6f87ac3edbf719dc736af8bc4331fb7b27704313b48f1871a2bbe065cf",
+    "provenance/archives/NSE_R3_FORCED_GP_DIAMOND_UNIFORM_CUTOFF_M7_v0_21_1.zip": "6996cc85131ef896e746f2590010eae6854457595cde6316e43746342796fa14",
+    "provenance/concrete_containment.json": "0ead93033b826954a54b64864f5e4c97e9cc4b8379718b11d09ab45c56e08b05",
+    "provenance/rocq_origins.json": "f747963f8d13e4c206fde35d0c4c0da741abee69944c20a5aa5acc644fc552bf",
+    "provenance/sources.json": "be780539f5148079e0613329fb09438e4bdb93bb3b6f61654032f83eb985e648"
+  },
+  "schema": 1,
+  "settings_sha256": {
+    "All.lean": "47e0afe2b3d2461997f6a3b4f49b97a35bbb86e1c3cde9a1d7323178522a540b",
+    "lake-manifest.json": "dfc9da7fb0931bd3f91dcacdd1d2c39fc5ece3c2d44229eb610f7fc54b323e4d",
+    "lakefile.lean": "35427ad244b2cf207ff9b747734c93099a8bdb74d4b56d10d96713c95245abe2",
+    "lean-toolchain": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+    "scripts/KernelAudit.lean": "595748f2934975885a6d3b95d4231ff526c26514e555f56da86ff8a754f2e13d",
+    "scripts/verify.py": "cbe042c0d8372e7f74e8bc80b233aa4f08457f0aac35a86a8c750d10d6e6a28b"
+  },
+  "source_sha256": {
+    "Audit.lean": "d7c7ed2055c2535a336c3461235f5b3b685439ede1533b7e1a76e66e3d3f1aa1",
+    "ConcreteABCDUnifiedClosure.lean": "b50becc18ace6fb2596fe2b98398363983727163bb573a5aedf6c76e6df6b706",
+    "Fefferman/Analysis.lean": "d70620b1e3035563a983351d193241b7dccdfc579af283487e811eabeaa60c24",
+    "Fefferman/CanonicalSource.lean": "469eda3587a4f4fdeabca5aacc95961c5559fc597478247525014fbe49bdb974",
+    "Fefferman/Continuation.lean": "20336f8a0327c9de80448043b12aeb88661a0b250bd464635f60359a8d51ab40",
+    "Fefferman/DerivationSupport.lean": "46faa8775ebb7b66b704f19535ab964deebd951cc5c6fa5b995697338d281507",
+    "Fefferman/FiniteSpectral.lean": "037362ce2f11491753c0f676242df8a566eab82a7ab0599baab32210905e002a",
+    "Fefferman/ForceRegimes.lean": "fa6226160e7e4cad7d34a6f675daf3bad364b12713904fcd8f9f666e02afdad5",
+    "Fefferman/IntrinsicIdentification.lean": "7f4ac398f874bbd36c9e37e1a8fe4a75937731f0ce82eb35032255918b678ceb",
+    "Fefferman/KernelAlgebra.lean": "3a201734f490579022ec6cc6873fceb5d29d083d0fc1599e5c86154dc0b269f3",
+    "Fefferman/KernelBirth.lean": "9f22806ae54e2cbf4677c5b0e22469b70f0a3f45f06e9cca5bb56e6ff42a0f46",
+    "Fefferman/KernelCalculus.lean": "44f3b530dfc880f6eda061c948c0a42154cb539cc7b9437615a43fa1733712d0",
+    "Fefferman/KernelCapacity.lean": "1e0f90f8fb33c6b8f1c8b58fa12fe5cbdad93a176f85e341f08b8367891d2e08",
+    "Fefferman/KernelCovariance.lean": "7e70d38098528cde1015aaa9c5f64439e57167f062f25d1d23f5f1b361c81272",
+    "Fefferman/KernelCritical.lean": "060c96b4db1db1a6ec51098450ab3d937887067d939282e3585d44a4c421d2e2",
+    "Fefferman/KernelGeometry.lean": "354cb70c695352ca155530a2bab01ff8e557c797636111589febad66e40ef0fa",
+    "Fefferman/KernelPackets.lean": "d3345c504ba990aa37b5b737e87d47bdfad7ed8aae693a6f2cbf855949a6339b",
+    "Fefferman/KernelRenewal.lean": "38d17ccb95ef6b0b40ede6f22345940da49ca2e8ac1d393bcae9e0600e7d371e",
+    "Fefferman/KernelStorage.lean": "6de1ed182368c6400580e810f6a0612498bf0d8802f6a097b36c7316d60557fd",
+    "Fefferman/Logic.lean": "be5b9549aa3ff87a7c83c76e7b4d46d7ac24e868b13f07227538ef3ab88565d6",
+    "Fefferman/MasterAC.lean": "fd42a07231948c6a0f2376cf713d777aa4517ec845e9406d0c19cfdda4bb2375",
+    "Fefferman/MasterCore.lean": "0d06b8f3fcff37a43fdc7694935b1f450bd7b22cd79927eae45ea2b42d378dcd",
+    "Fefferman/MovingFrame.lean": "4cb9838072b79648cca4541e429c31f79006f24081be58a4f0faf97a5588bdd5",
+    "Fefferman/Obstructions.lean": "cac01dc582c04423a388778ac983de50cd9f03a256d77a47b23096e2958dacb4",
+    "Fefferman/PhysicsClassical.lean": "4a23ec7602934669b60846dcc57dcb4433246c26c134f054496f0037da4a988c",
+    "Fefferman/PhysicsGravity.lean": "2dc86b049ab3a437ff929fb33b8dd6bcc0602747f579dbb78f738dcf014e5b9e",
+    "Fefferman/PhysicsQuantum.lean": "23b9af95e8ceee577065316596b9a53714b6da0b7bb0b74dc550dd60ef7ad224",
+    "Fefferman/PhysicsUnification.lean": "5d0276e67c0ee433fd5d1251b7e926a4dda3aa235be50999b76fe7199d04de33",
+    "Fefferman/PhysicsVariationalTransport.lean": "f3ce20fe667f33443e3a596267164e8f471eb4daab9c278c37d4e41b075984cb",
+    "Fefferman/ProjectRoutes.lean": "a219d0e5453f0dd44e467c338a5c8ef5430fdca71ec195a311fbe378c2bd8756",
+    "Fefferman/R3SourceBranch.lean": "237c33a2613ff310623c983987ad3cf87ef50b85509807a70ee81099cc323ac8",
+    "Fefferman/ReconstructedRoutes.lean": "9b129ef00847a033d24d7554e830524946f4df5a31682c5a4951222c72fe7988",
+    "Fefferman/ReducedCapacity.lean": "b8ca2853cc46c5f6b6d961f62490a4821d319493b58555a015831c780b851011",
+    "Fefferman/ScalarLedger.lean": "bfe3af50b38f705ddecc99d5bdb0f3de6973673e3389949692dc0124674a137b",
+    "Fefferman/SourceGeometry.lean": "af58710a99873b56de983aa42510dc5da7b1e476935d41b19ea17b8a474b7bf9",
+    "Fefferman/Statements.lean": "e026d1b26e3e4b6fccb6d338bbfb5c1f3c6c6fb75b15750616923e80c3da287f",
+    "Fefferman/T3IntegralBranch.lean": "179b917ad965750c72061eb5aef9f88c59d69f6b3086a7ac4df9418a1fcdb98a",
+    "Feffermann-Classification.lean": "0da7864c5bc95c6950686c86247dc1dece7da1b44263b011657ff604f85cd6eb",
+    "LayerA_Mathematics.lean": "3e1db812fcec8b99b41c087989b3e75c2712e90cc2cba0aed9fcae00011568ba",
+    "LayerB_Physics.lean": "b4b2f471f17bb4c397125f8b17fe853354a7baad7297f4770f739db21cd3a316",
+    "Master_R3_derivation.lean": "77daa48846747a04dd7cc21220475b14a10476b96f8816d56d9a0988787e4912",
+    "Master_R3_details.lean": "0cbd5b82a31fad054b25284a844a41237cb087e0fb18227741886baca12d3666",
+    "Master_T3.lean": "68a73b07b9edc21263b8060f40302caec668ef591f7fcf4696416dcc09b7c1dd",
+    "Master_T3_derivation.lean": "86c13449736c372cbb420b2a594fe2955bf162744f521e4934ee12632a52f331",
+    "Master_T3_details.lean": "a0112ffdf5e354d97450c3620ff03b87064a99879d4ec9f7ea98b5fde4f15bf9",
+    "Master_r3.lean": "503a5b2d8a9c94e5d5a34f0f4033163b4758caa0fd5923634ad3102f08df2d7a",
+    "NSE/Audit.lean": "bc1d015cd1c452fdd49099ca054575c6da01989ef30511144b0d7ca3e01315d7",
+    "NSE/Completion.lean": "c31f6edf55d206763a48d791dcb48d5caf0b590557eff3bda304cda00137d586",
+    "NSE/Continuation.lean": "a75981726893def86302ebcfdd1ff034ef838d6f63cdddaa1cfe9382da407105",
+    "NSE/CriticalBalance.lean": "0baf4388cf281af9e3475f511a455c9f69792f6670de86024980497488aa0a8f",
+    "NSE/HilbertEntrance.lean": "df945fa96d4d0b4fd39331dcfc4b2dbb1dafd7956891fbe47bc185d9265df593",
+    "NSE/Injection.lean": "abf24ed41f7ae8ff332c440b6ed27919f55e92a197d30dfc621f4ce876b2138e",
+    "NSE/LHLedger.lean": "6d33820f4e6966ece5aa41c3596d2bc68e05077d3a302eb46de071ae9397003d",
+    "NSE/NSEAnchor.lean": "b0f5cc925aeaf09fac7f9c30442ff0699d6142a981af8b762a0931e18bd001bf",
+    "NSE/PrefixPayment.lean": "7452fa7979ac800f62a0d9141c16dd17eb468da1ec59ddc583a7eaab8a189d79",
+    "NSE/Representation.lean": "fa67bda1dc8245e348fac8b72787e353dce62888a7c6bcb487bec8c81314b3c1",
+    "NSE/Serrin.lean": "204f6529fef0952ff210d733f3da0d88efa31074f0b07b38943286fa89f4bfbe",
+    "NSEForcingRegularityClasses.lean": "7d5e471d1085b326e140854d6ad78df067e7a7e291346a8c3ffade03b948af35",
+    "Types.lean": "5e3ce312379625a1f04c76a18b752702f671ff1b023779be1b28ffc52ec23b25"
+  },
+  "status": "COMPILED_AXIOM_AUDITED_CONDITIONAL_ARCHITECTURE"
+}
