@@ -1,0 +1,47 @@
+From Stdlib Require Import Reals.
+Require Import LHGP_Hilbert LHGP_Evolution LHGP_Equivalence.
+Require Import LHGP_ForwardGradient LHGP_ForwardReadouts.
+Require Import LHGP_InitialEnergy LHGP_ForwardContainment LHGP_Completion070.
+
+(* The printed predicates make the remaining interpretation inputs visible.
+   Source membership is not defined by GP membership. The energy condition
+   starts at zero and does not assume a full-measure restart-time set. *)
+Print ForwardGradientData.
+Print WeakGradientForward.
+Print InitialEnergyInequality.
+Print EnergySchedule0.
+Print HilbertForwardLHModel.
+Print GPForwardLHModel.
+Print RawForwardLHModel.
+Print TimeData.
+
+Check FORWARD_GRADIENT_COMPLETED_SQUARE.
+Check FORWARD_GRADIENT_VARIATIONAL_VALUE.
+Check FORWARD_GRADIENT_DISSIPATION_EXACT.
+Check FORWARD_DISSIPATION_STRICT_SUPERLEVEL_TIME_OPEN.
+Check FORWARD_DISSIPATION_SUBLEVEL_TIME_BOREL.
+Check FORWARD_LINEAR_COEFFICIENTS_L2.
+Check FORWARD_AMBIENT_TEST_READOUT.
+Check FORWARD_AMBIENT_GP_READOUT.
+Check FORWARD_QUADRATIC_ERROR_CAP.
+Check FORWARD_QUADRATIC_PATH_DOMINATION.
+Check RESTART_ENERGY_IMPLIES_INITIAL_ENERGY.
+Check LHGP_FORWARD_ENCODING_CONTAINMENT.
+Check LHGP_FORWARD_ENCODING_INJECTIVE.
+Check LHGP_FORWARD_REALIZED_STRONG_INITIAL.
+Check LHGP_RESTART_MODEL_TO_FORWARD_MODEL.
+Check RAW_FORWARD_GP_CONTAINMENT.
+Check R3_FULL_TEST_FORWARD_GRADIENT_CONSTRUCTED.
+Check R3_FULL_TEST_FORWARD_CONTAINMENT.
+
+Print Assumptions FORWARD_GRADIENT_VARIATIONAL_VALUE.
+Print Assumptions FORWARD_GRADIENT_DISSIPATION_EXACT.
+Print Assumptions FORWARD_DISSIPATION_SUBLEVEL_TIME_BOREL.
+Print Assumptions FORWARD_AMBIENT_GP_READOUT.
+Print Assumptions FORWARD_QUADRATIC_READOUT_WITH_BOUNDS.
+Print Assumptions LHGP_FORWARD_ENCODING_CONTAINMENT.
+Print Assumptions LHGP_FORWARD_ENCODING_INJECTIVE.
+Print Assumptions LHGP_FORWARD_REALIZED_STRONG_INITIAL.
+Print Assumptions LHGP_RESTART_MODEL_TO_FORWARD_MODEL.
+Print Assumptions RAW_FORWARD_GP_CONTAINMENT.
+Print Assumptions R3_FULL_TEST_FORWARD_CONTAINMENT.

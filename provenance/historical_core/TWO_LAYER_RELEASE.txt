@@ -1,0 +1,24 @@
+MASTERAC TWO-LAYER RELEASE v0.11.0
+
+Layer A — Mathematics
+  Public module: LayerA_Mathematics
+  Scope: NSE/Fefferman R3/T3, MasterAC, intrinsic identification,
+         moving finite Parseval frame, kernel reconstruction.
+  Dependency on Layer B: none.
+
+Layer B — Physics examples
+  Public module: LayerB_Physics
+  Scope: variational transport, CM, QM GP-shift/CCR/picture duality,
+         Cartan/GR action algebra and metric reconstruction.
+  Dependency: Layer B imports Layer A.
+
+A successful run separately reports:
+  LAYER_A_MATHEMATICS=PASS
+  LAYER_B_PHYSICS=PASS
+  PRINTED_THEOREM_AXIOM_REPORTS=362
+  NO_SORRYAX_IN_PRINTED_REPORT=PASS
+  PROJECT_BUILD=PASS
+  RUN=PASS
+
+This package does not claim unconditional NSE regularity or a completed
+QM<->GR equivalence.  Existing realization frontiers remain explicit.

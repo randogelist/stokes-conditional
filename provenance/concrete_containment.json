@@ -1,0 +1,62 @@
+{
+  "target": "ConcreteABCDUnifiedClosure.lean",
+  "target_sha256": "b50becc18ace6fb2596fe2b98398363983727163bb573a5aedf6c76e6df6b706",
+  "records": [
+    {
+      "source_package": "FEF_NSE_CONCRETE_PERIODIZATION_TRANSLATION_CLOSED_LEAN_v0_20_26_PASSFIX",
+      "module": "ConcretePeriodizationTranslationClosed",
+      "path": "branch_review/FEF_NSE_CONCRETE_PERIODIZATION_TRANSLATION_CLOSED_LEAN_v0_20_26_PASSFIX/FEF_NSE_CONCRETE_PERIODIZATION_TRANSLATION_CLOSED_LEAN_v0_20_26_PASSFIX/ConcretePeriodizationTranslationClosed.lean",
+      "bytes": 47664,
+      "sha256": "c8bee2fbbf11ba2263d29b7b26b3bea20ca2c071c358241b2e1cca180989bf65",
+      "exact_byte_prefix_of_v0_25_0": true
+    },
+    {
+      "source_package": "FEF_NSE_CONCRETE_SOURCE_RESCALING_LEAN_v0_20_27",
+      "module": "ConcreteSourceRescaling",
+      "path": "branch_review/FEF_NSE_CONCRETE_SOURCE_RESCALING_LEAN_v0_20_27/FEF_NSE_CONCRETE_SOURCE_RESCALING_LEAN_v0_20_27/ConcreteSourceRescaling.lean",
+      "bytes": 53325,
+      "sha256": "1072f2a60b1aebf41517fa31523851354e83d4f1847117cd824ca846b3634169",
+      "exact_byte_prefix_of_v0_25_0": true
+    },
+    {
+      "source_package": "FEF_NSE_COROLLARY106_DELAYED_RESCALING_LEAN_v0_20_29_PASSFIX",
+      "module": "ConcreteCorollary106Delayed",
+      "path": "branch_review/FEF_NSE_COROLLARY106_DELAYED_RESCALING_LEAN_v0_20_29_PASSFIX/FEF_NSE_COROLLARY106_DELAYED_RESCALING_LEAN_v0_20_29_PASSFIX/ConcreteCorollary106Delayed.lean",
+      "bytes": 64859,
+      "sha256": "c95db1e141629b34a891d59a4aecd913ab56907bf520e48a76ee8c7d74c971d7",
+      "exact_byte_prefix_of_v0_25_0": true
+    },
+    {
+      "source_package": "FEF_NSE_PERIODIC_B_A_TIER_CLOSURE_LEAN_v0_21_1_FIX1",
+      "module": "ConcretePeriodicBAClosure",
+      "path": "branch_review/FEF_NSE_PERIODIC_B_A_TIER_CLOSURE_LEAN_v0_21_1_FIX1/FEF_NSE_PERIODIC_B_A_TIER_CLOSURE_LEAN_v0_21_1_FIX1/ConcretePeriodicBAClosure.lean",
+      "bytes": 70040,
+      "sha256": "87ea41a4d184f026a9c03db5e0b5c86e8ff87bb167ace90d2fcf3eb89b46d188",
+      "exact_byte_prefix_of_v0_25_0": true
+    },
+    {
+      "source_package": "FEF_NSE_PERIODIC_D_A_TIER_CLOSURE_LEAN_v0_22_2_FIX2",
+      "module": "ConcretePeriodicDAClosure",
+      "path": "branch_review/FEF_NSE_PERIODIC_D_A_TIER_CLOSURE_LEAN_v0_22_2_FIX2/FEF_NSE_PERIODIC_D_A_TIER_CLOSURE_LEAN_v0_22_2_FIX2/ConcretePeriodicDAClosure.lean",
+      "bytes": 75600,
+      "sha256": "52241059a4067d508919114cb2505aeb89400678b4ae9dd98c6dc3b590bccad7",
+      "exact_byte_prefix_of_v0_25_0": true
+    },
+    {
+      "source_package": "FEF_NSE_WHOLESPACE_A_A_TIER_CLOSURE_LEAN_v0_24_0",
+      "module": "ConcreteWholeSpaceAAClosure",
+      "path": "branch_review/FEF_NSE_WHOLESPACE_A_A_TIER_CLOSURE_LEAN_v0_24_0/FEF_NSE_WHOLESPACE_A_A_TIER_CLOSURE_LEAN_v0_24_0/ConcreteWholeSpaceAAClosure.lean",
+      "bytes": 83440,
+      "sha256": "caa943626350154de81df2e1a94e826be79d287605a242e16dab72676d4ba5d4",
+      "exact_byte_prefix_of_v0_25_0": true
+    },
+    {
+      "source_package": "FEF_NSE_WHOLESPACE_C_A_TIER_CLOSURE_LEAN_v0_23_0",
+      "module": "ConcreteWholeSpaceCAClosure",
+      "path": "branch_review/FEF_NSE_WHOLESPACE_C_A_TIER_CLOSURE_LEAN_v0_23_0/FEF_NSE_WHOLESPACE_C_A_TIER_CLOSURE_LEAN_v0_23_0/ConcreteWholeSpaceCAClosure.lean",
+      "bytes": 80879,
+      "sha256": "a1b82c5e681f44cfa38c5ddd8c7a527f15f1022efc789fceff29668098802fe8",
+      "exact_byte_prefix_of_v0_25_0": true
+    }
+  ]
+}

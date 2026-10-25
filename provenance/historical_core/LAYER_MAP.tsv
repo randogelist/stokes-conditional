@@ -1,0 +1,3 @@
+LAYER	ROLE	PUBLIC_MODULE	DEPENDENCY_DIRECTION	STATUS
+A	NSE/Fefferman mathematics	LayerA_Mathematics	Independent of Layer B	Kernel target
+B	CM/QM/GR derivation examples	LayerB_Physics	Layer B -> Layer A only	Kernel target

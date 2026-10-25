@@ -1,0 +1,14 @@
+.lake/
+.elan/
+artifacts/
+__pycache__/
+*.pyc
+*.olean
+*.ilean
+*.c
+*.o
+*.obj
+*.a
+*.dll
+*.so
+.DS_Store

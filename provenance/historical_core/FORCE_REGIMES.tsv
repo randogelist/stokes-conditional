@@ -1,0 +1,7 @@
+domain	certificate_regime	required_soundness	Fefferman_consequence	remaining_obligation
+R3	regular	admissible force and global solution for every admissible initial datum	zero-force membership implies A	concrete criterion, realization, soundness, zero-force membership
+R3	breakdown	admissible force and some admissible initial datum with no qualifying global solution	one certified force per viscosity implies C	concrete criterion, nonexistence proof, nonempty regime at each viscosity
+R3	unresolved	admissible force with neither certificate	no NSE outcome inferred	stronger criteria or an independent proof
+T3	regular	admissible periodic force and global periodic velocity/pressure for every admissible initial datum	zero-force membership implies B	domain-specific criterion, periodic realization, soundness, zero-force membership
+T3	breakdown	admissible periodic force and some admissible initial datum with no qualifying global periodic pair	one certified force per viscosity implies D	domain-specific criterion, nonexistence proof, nonempty regime at each viscosity
+T3	unresolved	admissible periodic force with neither certificate	no NSE outcome inferred	stronger criteria or an independent proof

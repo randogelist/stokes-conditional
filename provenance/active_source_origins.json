@@ -1,0 +1,665 @@
+{
+  "Types.lean": {
+    "sha256": "5e3ce312379625a1f04c76a18b752702f671ff1b023779be1b28ffc52ec23b25",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Types.lean"
+      }
+    ]
+  },
+  "LayerB_Physics.lean": {
+    "sha256": "b4b2f471f17bb4c397125f8b17fe853354a7baad7297f4770f739db21cd3a316",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/LayerB_Physics.lean"
+      }
+    ]
+  },
+  "Feffermann-Classification.lean": {
+    "sha256": "0da7864c5bc95c6950686c86247dc1dece7da1b44263b011657ff604f85cd6eb",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Feffermann-Classification.lean"
+      }
+    ]
+  },
+  "Master_R3_derivation.lean": {
+    "sha256": "77daa48846747a04dd7cc21220475b14a10476b96f8816d56d9a0988787e4912",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Master_R3_derivation.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Master_R3_derivation.lean"
+      }
+    ]
+  },
+  "Master_r3.lean": {
+    "sha256": "503a5b2d8a9c94e5d5a34f0f4033163b4758caa0fd5923634ad3102f08df2d7a",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Master_r3.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Master_r3.lean"
+      }
+    ]
+  },
+  "Audit.lean": {
+    "sha256": "d7c7ed2055c2535a336c3461235f5b3b685439ede1533b7e1a76e66e3d3f1aa1",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Audit.lean"
+      }
+    ]
+  },
+  "LayerA_Mathematics.lean": {
+    "sha256": "3e1db812fcec8b99b41c087989b3e75c2712e90cc2cba0aed9fcae00011568ba",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/LayerA_Mathematics.lean"
+      }
+    ]
+  },
+  "Master_T3.lean": {
+    "sha256": "68a73b07b9edc21263b8060f40302caec668ef591f7fcf4696416dcc09b7c1dd",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Master_T3.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Master_T3.lean"
+      }
+    ]
+  },
+  "NSEForcingRegularityClasses.lean": {
+    "sha256": "c8af8efd6b8748f5679c0033123ecdabc351526d411deab4939f00d9831bf0ce",
+    "origins": [
+      {
+        "archive": "provenance/archives/NSE_FORCING_REGULARITY_CLASSES_LEAN_v0_1_4.zip",
+        "member": "NSE_FORCING_REGULARITY_CLASSES_LEAN_v0_1_4/NSEForcingRegularityClasses.lean"
+      }
+    ]
+  },
+  "Master_R3_details.lean": {
+    "sha256": "0cbd5b82a31fad054b25284a844a41237cb087e0fb18227741886baca12d3666",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Master_R3_details.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Master_R3_details.lean"
+      }
+    ]
+  },
+  "Master_T3_details.lean": {
+    "sha256": "a0112ffdf5e354d97450c3620ff03b87064a99879d4ec9f7ea98b5fde4f15bf9",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Master_T3_details.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Master_T3_details.lean"
+      }
+    ]
+  },
+  "Master_T3_derivation.lean": {
+    "sha256": "86c13449736c372cbb420b2a594fe2955bf162744f521e4934ee12632a52f331",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Master_T3_derivation.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Master_T3_derivation.lean"
+      }
+    ]
+  },
+  "ConcreteABCDUnifiedClosure.lean": {
+    "sha256": "b50becc18ace6fb2596fe2b98398363983727163bb573a5aedf6c76e6df6b706",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_ABCD_A_TIER_UNIFIED_CLOSURE_LEAN_v0_25_0.zip",
+        "member": "FEF_NSE_ABCD_A_TIER_UNIFIED_CLOSURE_LEAN_v0_25_0/ConcreteABCDUnifiedClosure.lean"
+      }
+    ]
+  },
+  "Fefferman/KernelRenewal.lean": {
+    "sha256": "38d17ccb95ef6b0b40ede6f22345940da49ca2e8ac1d393bcae9e0600e7d371e",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/KernelRenewal.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/KernelRenewal.lean"
+      }
+    ]
+  },
+  "Fefferman/ProjectRoutes.lean": {
+    "sha256": "a219d0e5453f0dd44e467c338a5c8ef5430fdca71ec195a311fbe378c2bd8756",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/ProjectRoutes.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/ProjectRoutes.lean"
+      }
+    ]
+  },
+  "Fefferman/Obstructions.lean": {
+    "sha256": "cac01dc582c04423a388778ac983de50cd9f03a256d77a47b23096e2958dacb4",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/Obstructions.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/Obstructions.lean"
+      }
+    ]
+  },
+  "Fefferman/KernelGeometry.lean": {
+    "sha256": "354cb70c695352ca155530a2bab01ff8e557c797636111589febad66e40ef0fa",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/KernelGeometry.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/KernelGeometry.lean"
+      }
+    ]
+  },
+  "Fefferman/KernelStorage.lean": {
+    "sha256": "6de1ed182368c6400580e810f6a0612498bf0d8802f6a097b36c7316d60557fd",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/KernelStorage.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/KernelStorage.lean"
+      }
+    ]
+  },
+  "Fefferman/MasterAC.lean": {
+    "sha256": "fd42a07231948c6a0f2376cf713d777aa4517ec845e9406d0c19cfdda4bb2375",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/MasterAC.lean"
+      }
+    ]
+  },
+  "Fefferman/DerivationSupport.lean": {
+    "sha256": "46faa8775ebb7b66b704f19535ab964deebd951cc5c6fa5b995697338d281507",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/DerivationSupport.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/DerivationSupport.lean"
+      }
+    ]
+  },
+  "Fefferman/SourceGeometry.lean": {
+    "sha256": "af58710a99873b56de983aa42510dc5da7b1e476935d41b19ea17b8a474b7bf9",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/SourceGeometry.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/SourceGeometry.lean"
+      }
+    ]
+  },
+  "Fefferman/PhysicsGravity.lean": {
+    "sha256": "2dc86b049ab3a437ff929fb33b8dd6bcc0602747f579dbb78f738dcf014e5b9e",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/PhysicsGravity.lean"
+      }
+    ]
+  },
+  "Fefferman/ForceRegimes.lean": {
+    "sha256": "fa6226160e7e4cad7d34a6f675daf3bad364b12713904fcd8f9f666e02afdad5",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/ForceRegimes.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/ForceRegimes.lean"
+      }
+    ]
+  },
+  "Fefferman/IntrinsicIdentification.lean": {
+    "sha256": "7f4ac398f874bbd36c9e37e1a8fe4a75937731f0ce82eb35032255918b678ceb",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/IntrinsicIdentification.lean"
+      }
+    ]
+  },
+  "Fefferman/PhysicsQuantum.lean": {
+    "sha256": "23b9af95e8ceee577065316596b9a53714b6da0b7bb0b74dc550dd60ef7ad224",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/PhysicsQuantum.lean"
+      }
+    ]
+  },
+  "Fefferman/ScalarLedger.lean": {
+    "sha256": "bfe3af50b38f705ddecc99d5bdb0f3de6973673e3389949692dc0124674a137b",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/ScalarLedger.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/ScalarLedger.lean"
+      }
+    ]
+  },
+  "Fefferman/Analysis.lean": {
+    "sha256": "d70620b1e3035563a983351d193241b7dccdfc579af283487e811eabeaa60c24",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/Analysis.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/Analysis.lean"
+      }
+    ]
+  },
+  "Fefferman/CanonicalSource.lean": {
+    "sha256": "469eda3587a4f4fdeabca5aacc95961c5559fc597478247525014fbe49bdb974",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/CanonicalSource.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/CanonicalSource.lean"
+      }
+    ]
+  },
+  "Fefferman/Statements.lean": {
+    "sha256": "e026d1b26e3e4b6fccb6d338bbfb5c1f3c6c6fb75b15750616923e80c3da287f",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/Statements.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/Statements.lean"
+      }
+    ]
+  },
+  "Fefferman/KernelCovariance.lean": {
+    "sha256": "7e70d38098528cde1015aaa9c5f64439e57167f062f25d1d23f5f1b361c81272",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/KernelCovariance.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/KernelCovariance.lean"
+      }
+    ]
+  },
+  "Fefferman/Continuation.lean": {
+    "sha256": "20336f8a0327c9de80448043b12aeb88661a0b250bd464635f60359a8d51ab40",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/Continuation.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/Continuation.lean"
+      }
+    ]
+  },
+  "Fefferman/ReconstructedRoutes.lean": {
+    "sha256": "9b129ef00847a033d24d7554e830524946f4df5a31682c5a4951222c72fe7988",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/ReconstructedRoutes.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/ReconstructedRoutes.lean"
+      }
+    ]
+  },
+  "Fefferman/PhysicsVariationalTransport.lean": {
+    "sha256": "f3ce20fe667f33443e3a596267164e8f471eb4daab9c278c37d4e41b075984cb",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/PhysicsVariationalTransport.lean"
+      }
+    ]
+  },
+  "Fefferman/MasterCore.lean": {
+    "sha256": "0d06b8f3fcff37a43fdc7694935b1f450bd7b22cd79927eae45ea2b42d378dcd",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/MasterCore.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/MasterCore.lean"
+      }
+    ]
+  },
+  "Fefferman/KernelAlgebra.lean": {
+    "sha256": "3a201734f490579022ec6cc6873fceb5d29d083d0fc1599e5c86154dc0b269f3",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/KernelAlgebra.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/KernelAlgebra.lean"
+      }
+    ]
+  },
+  "Fefferman/KernelCritical.lean": {
+    "sha256": "060c96b4db1db1a6ec51098450ab3d937887067d939282e3585d44a4c421d2e2",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/KernelCritical.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/KernelCritical.lean"
+      }
+    ]
+  },
+  "Fefferman/Logic.lean": {
+    "sha256": "be5b9549aa3ff87a7c83c76e7b4d46d7ac24e868b13f07227538ef3ab88565d6",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/Logic.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/Logic.lean"
+      }
+    ]
+  },
+  "Fefferman/PhysicsUnification.lean": {
+    "sha256": "5d0276e67c0ee433fd5d1251b7e926a4dda3aa235be50999b76fe7199d04de33",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/PhysicsUnification.lean"
+      }
+    ]
+  },
+  "Fefferman/PhysicsClassical.lean": {
+    "sha256": "4a23ec7602934669b60846dcc57dcb4433246c26c134f054496f0037da4a988c",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/PhysicsClassical.lean"
+      }
+    ]
+  },
+  "Fefferman/ReducedCapacity.lean": {
+    "sha256": "b8ca2853cc46c5f6b6d961f62490a4821d319493b58555a015831c780b851011",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/ReducedCapacity.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/ReducedCapacity.lean"
+      }
+    ]
+  },
+  "Fefferman/KernelCapacity.lean": {
+    "sha256": "1e0f90f8fb33c6b8f1c8b58fa12fe5cbdad93a176f85e341f08b8367891d2e08",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/KernelCapacity.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/KernelCapacity.lean"
+      }
+    ]
+  },
+  "Fefferman/R3SourceBranch.lean": {
+    "sha256": "237c33a2613ff310623c983987ad3cf87ef50b85509807a70ee81099cc323ac8",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/R3SourceBranch.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/R3SourceBranch.lean"
+      }
+    ]
+  },
+  "Fefferman/KernelPackets.lean": {
+    "sha256": "d3345c504ba990aa37b5b737e87d47bdfad7ed8aae693a6f2cbf855949a6339b",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/KernelPackets.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/KernelPackets.lean"
+      }
+    ]
+  },
+  "Fefferman/MovingFrame.lean": {
+    "sha256": "4cb9838072b79648cca4541e429c31f79006f24081be58a4f0faf97a5588bdd5",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/MovingFrame.lean"
+      }
+    ]
+  },
+  "Fefferman/FiniteSpectral.lean": {
+    "sha256": "037362ce2f11491753c0f676242df8a566eab82a7ab0599baab32210905e002a",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/FiniteSpectral.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/FiniteSpectral.lean"
+      }
+    ]
+  },
+  "Fefferman/KernelBirth.lean": {
+    "sha256": "9f22806ae54e2cbf4677c5b0e22469b70f0a3f45f06e9cca5bb56e6ff42a0f46",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/KernelBirth.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/KernelBirth.lean"
+      }
+    ]
+  },
+  "Fefferman/KernelCalculus.lean": {
+    "sha256": "44f3b530dfc880f6eda061c948c0a42154cb539cc7b9437615a43fa1733712d0",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/KernelCalculus.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/KernelCalculus.lean"
+      }
+    ]
+  },
+  "Fefferman/T3IntegralBranch.lean": {
+    "sha256": "179b917ad965750c72061eb5aef9f88c59d69f6b3086a7ac4df9418a1fcdb98a",
+    "origins": [
+      {
+        "archive": "provenance/archives/FEF_NSE_CLASSIFICATION_LEAN_v0_7_7.zip",
+        "member": "FEF_NSE_CLASSIFICATION_LEAN_v0_7_7/Fefferman/T3IntegralBranch.lean"
+      },
+      {
+        "archive": "provenance/archives/FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0.zip",
+        "member": "FEF_NSE_MASTERAC_TWO_LAYER_LEAN_v0_11_0/Fefferman/T3IntegralBranch.lean"
+      }
+    ]
+  },
+  "NSE/Completion.lean": {
+    "sha256": "c31f6edf55d206763a48d791dcb48d5caf0b590557eff3bda304cda00137d586",
+    "origins": [
+      {
+        "archive": "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0.zip",
+        "member": "NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0/NSE/Completion.lean"
+      }
+    ]
+  },
+  "NSE/HilbertEntrance.lean": {
+    "sha256": "df945fa96d4d0b4fd39331dcfc4b2dbb1dafd7956891fbe47bc185d9265df593",
+    "origins": [
+      {
+        "archive": "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0.zip",
+        "member": "NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0/NSE/HilbertEntrance.lean"
+      }
+    ]
+  },
+  "NSE/Audit.lean": {
+    "sha256": "bc1d015cd1c452fdd49099ca054575c6da01989ef30511144b0d7ca3e01315d7",
+    "origins": [
+      {
+        "archive": "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0.zip",
+        "member": "NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0/NSE/Audit.lean"
+      }
+    ]
+  },
+  "NSE/Representation.lean": {
+    "sha256": "fa67bda1dc8245e348fac8b72787e353dce62888a7c6bcb487bec8c81314b3c1",
+    "origins": [
+      {
+        "archive": "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0.zip",
+        "member": "NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0/NSE/Representation.lean"
+      }
+    ]
+  },
+  "NSE/Continuation.lean": {
+    "sha256": "a75981726893def86302ebcfdd1ff034ef838d6f63cdddaa1cfe9382da407105",
+    "origins": [
+      {
+        "archive": "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0.zip",
+        "member": "NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0/NSE/Continuation.lean"
+      }
+    ]
+  },
+  "NSE/Injection.lean": {
+    "sha256": "abf24ed41f7ae8ff332c440b6ed27919f55e92a197d30dfc621f4ce876b2138e",
+    "origins": [
+      {
+        "archive": "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0.zip",
+        "member": "NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0/NSE/Injection.lean"
+      }
+    ]
+  },
+  "NSE/Serrin.lean": {
+    "sha256": "204f6529fef0952ff210d733f3da0d88efa31074f0b07b38943286fa89f4bfbe",
+    "origins": [
+      {
+        "archive": "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0.zip",
+        "member": "NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0/NSE/Serrin.lean"
+      }
+    ]
+  },
+  "NSE/NSEAnchor.lean": {
+    "sha256": "b0f5cc925aeaf09fac7f9c30442ff0699d6142a981af8b762a0931e18bd001bf",
+    "origins": [
+      {
+        "archive": "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0.zip",
+        "member": "NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0/NSE/NSEAnchor.lean"
+      }
+    ]
+  },
+  "NSE/CriticalBalance.lean": {
+    "sha256": "0baf4388cf281af9e3475f511a455c9f69792f6670de86024980497488aa0a8f",
+    "origins": [
+      {
+        "archive": "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0.zip",
+        "member": "NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0/NSE/CriticalBalance.lean"
+      }
+    ]
+  },
+  "NSE/PrefixPayment.lean": {
+    "sha256": "7452fa7979ac800f62a0d9141c16dd17eb468da1ec59ddc583a7eaab8a189d79",
+    "origins": [
+      {
+        "archive": "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0.zip",
+        "member": "NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0/NSE/PrefixPayment.lean"
+      }
+    ]
+  },
+  "NSE/LHLedger.lean": {
+    "sha256": "6d33820f4e6966ece5aa41c3596d2bc68e05077d3a302eb46de071ae9397003d",
+    "origins": [
+      {
+        "archive": "provenance/archives/NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0.zip",
+        "member": "NSE_LH_GP_BKQR_M7_SERRIN_LEAN_v0_1_0/NSE/LHLedger.lean"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "source_anchor": "NSE_FEFFERMAN_ABCD_RECOVERED_v0_1_0",
+  "assembly_date": "2026-10-25",
+  "scope": "Source-preserving consolidation, conditional proofs, and endpoint equivalences",
+  "source_modules": 59,
+  "source_archives": 26,
+  "reference_rocq_files": 190,
+  "physical_endpoints": {"A": "OPEN", "B": "OPEN", "C": "OPEN", "D": "OPEN"},
+  "official_pde_equivalence": "BOUNDARY_TIME_DERIVATIVE_ALIGNMENT_OPEN",
+  "cross_branch_same_trajectory_identification": "NOT_CONSTRUCTED",
+  "compiled_status_authority": "GitHub Actions logs and artifacts/anchor-receipt.json at the exact commit",
+  "historical_passes": "Not promoted to a fresh cross-platform build receipt"
+}

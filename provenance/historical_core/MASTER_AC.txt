@@ -1,0 +1,55 @@
+MASTER AC — R3 INTERNAL A/C MASTER LAYER
+=======================================
+
+MasterAC is the internal theorem surface.  It contains only:
+
+  1. zero force satisfies the internal R3 regular criterion for every positive
+     viscosity;
+  2. every positive viscosity has an internal breakdown object satisfying the
+     model's own breakdown criterion.
+
+MasterAC contains no Fefferman A/C statement, no hasGlobalSolution statement,
+no nonexistence-of-solution statement, and no assertion that arbitrary internal
+forces are Fefferman forces.
+
+MasterACProjection is deliberately weaker than a total force identification.
+It identifies only:
+
+  * the zero force needed by A;
+  * the particular MasterAC breakdown witness family needed by C.
+
+All other forces may remain unidentified or unresolved without affecting the
+final A/C conversion theorem.
+
+The projection also carries the same-physical-input realization/exit ports:
+internal regularity is realized by an R3 storage witness on the same ForcedInput
+and exits through critical control; internal breakdown is realized by a
+NetWorkWitness on the same ForcedInput and every qualifying global solution
+would bound its mass ledger.  The scalar net-work theorem then excludes such a
+global solution.
+
+Primary theorem
+---------------
+
+  MASTER_AC_IMPLIES_FEFFERMAN_A_AND_C
+
+  LedgerArithmetic a ->
+  R3DerivationModel a ->
+  MasterAC m ->
+  MasterACProjection m ->
+  A a ∧ C a.
+
+This file therefore separates three levels cleanly:
+
+  INTERNAL THEOREM      MasterAC
+  PHYSICAL PROJECTION   MasterACProjection
+  OFFICIAL OUTPUT       Fefferman A ∧ C
+
+The future concrete Leray-Hopf embedding belongs in the projection layer.  It
+can prove the required identification/reflection properties without changing
+MasterAC itself.
+
+This release does not claim that the internal breakdown witness family or the
+concrete real-analysis/Leray-Hopf projection has already been constructed.
+Those are explicit frontier inputs at the correct boundary rather than A/C
+restatements.
