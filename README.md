@@ -4,6 +4,12 @@ This branch consolidates the strongest recoverable Fefferman classification and 
 
 The mathematical result is a conditional theorem architecture and an endpoint-equivalence atlas. **No unconditional physical Fefferman A, B, C, or D endpoint is established by this consolidation.** CI success means that the actual statements compile and pass the declared axiom audit. It does not discharge their hypotheses or establish independent equivalence with the official PDE problem.
 
+## Preprint and generalized classification
+
+[Read the preprint](paper/generalized_fefferman_preprint.pdf): **A Domain-Indexed Framework for Generalized Fefferman Force Classification**, research draft 0.1 (25 October 2026). It develops the semantic partition, certificate criteria, A–D projections, witness interfaces, and forcing extensions, with proofs and explicit source/verification boundaries.
+
+The [concise synthesis](docs/GENERALIZED_FEFFERMAN_CLASSIFICATION.md), [claim-to-source map](paper/claims.json), and [editable LaTeX source and build instructions](paper/README.md) accompany it. The preprint is a documentation contribution; its force-family corollary is a manuscript deduction, not a new Lean declaration. The cited Linux/Windows CI evidence remains anchored to source commit `26bc074c2b8ebf57fa0fabcf9b8263673de9d80b`.
+
 ## Active source anchors
 
 | Component | Recovered identity | Active source |
